@@ -1,0 +1,18 @@
+<?php
+function profile_ajax_module_theme() {
+   return array(
+      'profile_ajax_module_javascript' => array(
+         'arguments' => array(),
+      ),
+   );   
+}
+
+function profile_ajax_module_init() {
+  theme('profile_ajax_module_javascript');
+}
+
+function theme_profile_ajax_module_javascript() {
+  drupal_add_js(drupal_get_path('module', 'profile_ajax_module') . '/profile_ajax_module.js');
+}
+
+

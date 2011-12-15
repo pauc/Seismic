@@ -1,0 +1,5 @@
+; $Id$
+name = "Custom Module"
+description = "Returns a list of products according to category."
+core = 6.x
+package = My Modules

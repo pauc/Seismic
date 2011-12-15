@@ -1,0 +1,22 @@
+// $Id$
+$(function(){
+  $('a.custom_link').click(function() {
+    // This function will get exceuted after the ajax request is completed successfully
+    
+    var toLoad = $(this).attr('href');
+    
+    $('body').append('<p>Holaaa!</p>');
+    
+    // Now load the content
+      xhr = $.ajax({
+        url: toLoad,
+        success: function(data) {
+           
+          // Inject the new content into <div id="our-div"></div>
+          $('body').append(data);
+        }
+      });
+    
+    return false;  // return false so the navigation stops here and not continue to the page in the link
+  }).addClass('categoryLink-processed');
+});
