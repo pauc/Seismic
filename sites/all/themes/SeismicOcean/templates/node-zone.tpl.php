@@ -71,10 +71,14 @@
  * @see zen_process()
  */
 ?>
+<?php
+  drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu.js', 'theme');
+?>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php print $user_picture; ?>
 
-  <?php if (!$page && $title && !$is_front): ?>
+  <?php if (!$page && $title): ?>
     <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
   <?php endif; ?>
 
@@ -97,11 +101,8 @@
   <?php endif; ?>
 
   <div class="content">
-    <?php print views_embed_view('front_page_slideshow'); ?>
-    <?php if($is_front): ?>
-        <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
     <?php print $content; ?>
+    <?php if(!$teaser) print views_embed_view('zone_view', 'page_1', $nid); ?>
   </div>
 
   <?php print $links; ?>

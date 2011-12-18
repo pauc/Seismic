@@ -11,6 +11,7 @@
 
 
 body {
+    background-color: #00a;
 }
 
 #page-wrapper {
@@ -20,9 +21,22 @@ body {
 }
 
 #header {
+    background-color: #000;
 }
 
 #header .section {
+}
+
+#content {
+    background-color: #fff;
+}
+
+#navigation {
+    background-color: #2BD0F4;
+}
+
+.sidebar .section .block{
+    background-color: #fff;
 }
 
 #main-wrapper {

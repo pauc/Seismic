@@ -1,0 +1,191 @@
+/* $Id: nice_menus_default.css,v 1.10 2010/10/09 16:58:04 add1sun Exp $ */
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+#block-nice_menus-2 {
+  width: auto;
+  height: auto;
+}
+
+#block-nice_menus-2 .content {
+  padding: 0;
+}
+
+.nice-menu a:link, .nice-menu a:visited, .nice-menu a:active {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nice-menu ul a:link, .nice-menu ul a:visited, .nice-menu ul a:active {
+    color: #000;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nice-menu li {
+  border-top: 0;
+  float: left; /* LTR */    
+}
+
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+}
+
+ul.nice-menu ul {
+  visibility: hidden;
+  width: 120px;
+  top: 26px;
+  left: -1px; /* LTR */
+  border: 0;
+  margin-right: 0; /* LTR */
+  background-color: #2bd0f4;
+  opacity: 0;
+  transition: visibility 0.6s, opacity 0.6s;
+  -moz-transition: visibility 0.6s, opacity 0.6s; /* Firefox 4 */
+  -webkit-transition: visibility 0.6s, opacity 0.6s; /* Safari and Chrome */
+  -o-transition: visibility 0.6s, opacity 0.6s; /* Opera */
+}
+
+ul.nice-menu li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.6s, opacity 0.6s;
+  -moz-transition: visibility 0.6s, opacity 0.6s; /* Firefox 4 */
+  -webkit-transition: visibility 0.6s, opacity 0.6s; /* Safari and Chrome */
+  -o-transition: visibility 0.6s, opacity 0.6s; /* Opera */
+}
+
+ul.nice-menu ul li {
+    padding: 0;
+    width: 120px;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down>li {
+    width: 120px;
+    background-color: #2bd0f4;
+    text-align: center;
+    height: 26px;
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+  color: #2BD0F4;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 0; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent {
+  background: #2bd0f4;
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s; /* Firefox 4 */
+  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
+  -o-transition: background-color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down>li:hover  {
+  background-color: #000; /* LTR */
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s; /* Firefox 4 */
+  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
+  -o-transition: background-color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down>li:hover>a {
+  color: #fff;
+  transition: color 0.5s;
+  -moz-transition: color 0.5s; /* Firefox 4 */
+  -webkit-transition: color 0.5s; /* Safari and Chrome */
+  -o-transition: color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down>li:hover>a:hover {
+  color: #2bd0f4;
+  transition: color 0.5s;
+  -moz-transition: color 0.5s; /* Firefox 4 */
+  -webkit-transition: color 0.5s; /* Safari and Chrome */
+  -o-transition: color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down li.menuparent:hover li {
+  background: #2bd0f4;
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s; /* Firefox 4 */
+  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
+  -o-transition: background-color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down li.menuparent:hover li:hover {
+  background-color: #000;
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s; /* Firefox 4 */
+  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
+  -o-transition: background-color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down li.menuparent:hover li a {    
+  color: #000;
+  transition: color 0.5s;
+  -moz-transition: color 0.5s; /* Firefox 4 */
+  -webkit-transition: color 0.5s; /* Safari and Chrome */
+  -o-transition: color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down li.menuparent:hover li a:hover {    
+  color: #2bd0f4;
+  transition: color 0.5s;
+  -moz-transition: color 0.5s; /* Firefox 4 */
+  -webkit-transition: color 0.5s; /* Safari and Chrome */
+  -o-transition: color 0.5s; /* Opera */
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
+}

@@ -1,6 +1,7 @@
 .front-slideshow {
+	height: 250px;
+	margin-bottom: 20px;
 	position: relative;
-	height: 350px;
 	overflow: hidden;
 }
 
@@ -17,13 +18,24 @@
 	height: 100%;
 	background: #000;
 	opacity: 0.8;
-	-moz-opacity: 0.8;
 	filter: alpha(opacity=80);
 }
 
 .front-slideshow-text {
 	position: relative;
-	padding: 10px 15px;
+	padding: 8px 8px 15px;
 	z-index: 20;
 	color: #fff;
+}
+
+.front-slideshow-text h3 {
+    margin: 0 0 4px;
+    font-size: 1.05em;
+    text-transform: uppercase;
+}
+
+.front-slideshow-text p {
+    margin: 0;
+    font-size: 0.82em;
+    line-height: 1.28em;
 }

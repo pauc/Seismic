@@ -6,6 +6,24 @@
 
 .block /* Block wrapper */ {
   /* margin-bottom: 1em; */
+  width: 316px;
+  height: 502px;
+  float: left;
+  overflow: hidden;
+}
+
+.region-under-content .block.even {
+  float: left;
+  margin-right: 14px;
+}
+
+.block .content {
+  padding: 10px;  
+  background-color: #fff;
+}
+
+.sidebar .block {
+  margin-bottom: 15px;
 }
 
 .block.first /* The first block in the region */ {

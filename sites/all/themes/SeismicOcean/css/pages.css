@@ -69,22 +69,37 @@ body {
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
+    float: left;
+    margin: 32px 0 0 20px;
 }
 
 h1#site-name,
 div#site-name /* The name of the website */ {
-  margin: 0;
-  font-size: 2em;
-  line-height: 1.3em;
+  float: left;
+  margin: 0 16px 0 0;
+  padding-right: 16px;
+  font-size: 2.5em;
+  line-height: 105%;  
+  border-right: 1px solid #fff;
 }
 
 #site-name a:link,
 #site-name a:visited {
-  color: #000;
+  color: #2BD0F4;
   text-decoration: none;
+  font-weight: normal;
 }
 
 #site-slogan /* The slogan (or tagline) of a website */ {
+  float: left;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+#site-slogan span {
+  font-weight: lighter;
 }
 
 .region-header /* Wrapper for any blocks placed in the header region */ {
@@ -115,7 +130,12 @@ div#site-name /* The name of the website */ {
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
+  margin-bottom: 10px;
   padding-bottom: 0; /* Undo system.css */
+}
+
+.breadcrumb span {
+  color: #2bd0f4;
 }
 
 h1.title, /* The title of the page */
@@ -176,8 +196,9 @@ ul.links /* List of links */ {
 }
 
 ul.links.inline {
-  margin: 0;
-  display: inline;
+  display: block;
+  text-align: right;
+  margin: 12px 0 0;
 }
 
 ul.links li {

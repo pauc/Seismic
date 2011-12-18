@@ -71,6 +71,10 @@
  * @see zen_process()
  */
 ?>
+<?php
+drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu.js', 'theme');
+?>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php print $user_picture; ?>
 
