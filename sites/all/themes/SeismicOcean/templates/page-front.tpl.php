@@ -114,9 +114,12 @@
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
   <?php print $styles; ?>
+  <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,200' rel='stylesheet' type='text/css'>
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>">
+  
+  <?php print $top; ?>
 
   <?php if ($primary_links): ?>
     <div id="skip-link"><a href="#main-menu"><?php print t('Jump to Navigation'); ?></a></div>

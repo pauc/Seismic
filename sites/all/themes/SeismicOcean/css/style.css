@@ -15,6 +15,7 @@ a, a:link, a:visited, a:active {
  */
 h1, h2 {
     text-transform: uppercase;
+    font-family: 'Terminal Dosis', sans-serif;
 }
 
 h1, 
@@ -41,7 +42,7 @@ h3 a:active {
  * ESTILS PER A FRONT
  */
 .front #content {
-  min-height: 502px;
+  min-height: 35.85em;
 }
 
 .front .node .content {
@@ -51,10 +52,63 @@ h3 a:active {
 
 .region-under-content {
   width: 646px;
-  margin-top: 562px;
+  margin-top: 40.15em;
   margin-left: 334px; /* LTR */ /* The width of .region-sidebar-first. */
   margin-right: -980px; /* LTR */ /* Negative value of #content's width + left margin. */
   float: left;
+}
+
+/*
+ * ESTILS DE REGION-TOP I PER AL MENU D'ADMINISTRACIÓ
+ */
+.region-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 0.8em;
+  z-index: 50;
+}
+
+.region-top .block {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+#block-nice_menus-1 h2 {
+  height: auto;
+}
+
+#block-nice_menus-1 .content {
+  padding: 5px;
+}
+
+#nice-menu-1 {
+  z-index: 50;
+  list-style: none;
+  margin: 0;
+}
+
+#nice-menu-1 li {
+  float: left;
+  margin: 0 20px;
+}
+
+#nice-menu-1 li ul {
+  background-color: #fff;
+  padding: 0 2px;
+}
+
+#nice-menu-1 li ul li {
+  margin: 2px 0;
+}
+
+#nice-menu-1 a {
+  color: #00b;
+}
+
+#nice-menu-1 a:hover {
+  color: #b02;
 }
 
 /*
@@ -68,31 +122,33 @@ h3 a:active {
  * ESTILS PER A LA CAIXA DEL CERCADOR
  */
 #search {
-    width: 260px;
+    width: 273px;
     background-color: #fff;
 }
 
 #edit-search-theme-form-1-wrapper {
-    margin: 0;
-    border: 0;
+  margin: 0;
+  border: 0;
 }
 
 #edit-search-theme-form-1 {
-    width: 205px;
-    height: 24px;
-    margin-top: 0;
-    padding-top: 1px;
-    padding-left: 8px;
-    border: 0;
-    color: #ec7400;
+  width: 215px;
+  height: 24px;
+  margin-top: 0;
+  padding: 1px 0 1px 8px;
+  border: 0;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 0.90em;
+  font-weight: bold;
+  color: #ec7400;
 }
 
 #search .form-submit {
-    height: 26px;
-    margin: 0;
-    display: block;
-    float: right;
-    vertical-align: middle;
+  height: 26px;
+  margin: 0;
+  display: block;
+  float: right;
+  vertical-align: middle;
 }
 
 /*

@@ -4,10 +4,10 @@
  */
 
 
-.block /* Block wrapper */ {
+.sidebar div.block, .region-under-content div.block /* Block wrapper */ {
   /* margin-bottom: 1em; */
   width: 316px;
-  height: 502px;
+  height: 35.85em;
   float: left;
   overflow: hidden;
 }
@@ -17,14 +17,83 @@
   margin-right: 14px;
 }
 
-.block .content {
+.sidebar div.block .content, .region-under-content div.block .content {
   padding: 10px;  
   background-color: #fff;
 }
 
-.sidebar .block {
+.sidebar div.block {
   margin-bottom: 15px;
 }
+
+.sidebar div.block:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * ESTILS PERL AL BLOC DELS PROJECTES
+ */
+#block-views-projects-block_1 .views-field-title {
+  padding: 5px 7px;
+  background-color: #2bd0f4;
+  border: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-transform: uppercase;
+}
+
+#block-views-projects-block_1 .views-field-teaser {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 10px 7px;
+  background-color: #ebf6f9;
+}
+
+#block-views-projects-block_1 .views-field-teaser p:first-child {
+  margin-top: 0;
+}
+
+#block-views-projects-block_1 .views-field-teaser p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * ESTILS PER AL BLOC AMB LOGOS D'INSTITUCIONS A LA REGIÓ FOOTER
+ */
+#block-block-3 {
+  padding: 15px 25px;
+}
+
+#block-block-3 div.transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #004;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  z-index: -1;
+}
+
+#block-block-3 img {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+#logo_ministeri {
+  width: 200px;
+}
+
+#logo_CSI {
+  width: 165px;
+}
+
+#logo_UTM {
+  width: 70px;
+}
+
+
 
 .block.first /* The first block in the region */ {
 }
