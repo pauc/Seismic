@@ -11,7 +11,7 @@
 
 
 body {
-    background-color: #00a;
+  background: url('../images/sea.jpg');
 }
 
 #page-wrapper {
@@ -21,28 +21,37 @@ body {
 }
 
 #header {
-    background-color: #000;
+  background-color: #000;
 }
 
 #header .section {
 }
 
 #content {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 #navigation {
-    background-color: #2BD0F4;
-}
-
-.sidebar .section .block{
-    background-color: #fff;
+  background-color: #2BD0F4;
 }
 
 #main-wrapper {
 }
 
 #main {
+}
+
+div.block {
+  background-color: #fff;
+}
+
+#block-block-1 {
+  background-color: #fff; // s'haurà de canviar a transparent més endavant
+}
+
+#block-block-3,
+#block-block-4 {
+  background: transparent;
 }
 
 #footer {
