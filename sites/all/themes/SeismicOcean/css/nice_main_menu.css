@@ -36,7 +36,7 @@
     color: #000;
     font-size: 1em;
     text-decoration: none;
-    text-transform: capitalize;
+    //text-transform: capitalize;
 }
 
 #block-nice_menus-2 ul.nice-menu,
@@ -93,12 +93,46 @@
 }
 
 #block-nice_menus-2 ul.nice-menu-down>li {
-  width: 101px;
-}
-
-#block-nice_menus-2 ul.nice-menu-down>li {    
   background-color: #2bd0f4;
   text-align: center;
+}
+
+#block-nice_menus-2 ul.nice-menu-down>li {
+  width: 110px;
+}
+
+#block-nice_menus-2 ul.nice-menu-down>li + li,
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li,
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li + li {     
+  width: 104px;
+}
+
+/*
+ * Different width for 4th li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li {   
+  width: 80px;
+}
+
+/*
+ * Different width for 5th li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li {   
+  width: 130px;
+}
+
+/*
+ * Different width for 6th li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li {
+  width: 70px;
+}
+
+/*
+ * Different width for 7th li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li + li {
+  width: 95px;
 }
 
 #block-nice_menus-2 ul.nice-menu-down li li {

@@ -122,7 +122,7 @@ h3 a:active {
  * ESTILS PER A LA CAIXA DEL CERCADOR
  */
 #search {
-    width: 273px;
+    width: 258px;
     background-color: #fff;
 }
 
@@ -132,7 +132,7 @@ h3 a:active {
 }
 
 #edit-search-theme-form-1 {
-  width: 215px;
+  width: 200px;
   height: 24px;
   margin-top: 0;
   padding: 1px 0 1px 8px;
