@@ -101,24 +101,25 @@
   width: 110px;
 }
 
-#block-nice_menus-2 ul.nice-menu-down>li + li,
-#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li,
-#block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li + li {     
-  width: 104px;
+/*
+ * Different width for 2nd and 3rd li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li {
+  width: 95px;
 }
 
 /*
  * Different width for 4th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li {   
-  width: 80px;
+  width: 130px;
 }
 
 /*
  * Different width for 5th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li {   
-  width: 130px;
+  width: 75px;
 }
 
 /*

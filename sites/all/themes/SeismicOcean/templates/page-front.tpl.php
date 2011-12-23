@@ -148,6 +148,7 @@
           <?php endif; ?>
 
           <?php if ($site_slogan): ?>
+            <?php $site_slogan = "Echoes <span>from the</span> ocean's interior"; ?>
             <div id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div><!-- /#name-and-slogan -->

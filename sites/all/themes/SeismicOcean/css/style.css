@@ -176,3 +176,12 @@ h3 a:active {
   background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
+
+/*
+ * ESTILS PER ALS "read more"
+ */
+.node_read_more a {
+  padding-left: 13px;
+  text-decoration: none;
+  background: url("../images/read_more-bg.png") no-repeat left 4px;
+}
