@@ -75,8 +75,8 @@
   width: 100%;
   height: 100%;
   background-color: #2bd0f4;
-  opacity:0.6;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
+  opacity:0.75;
+  filter:alpha(opacity=75); /* For IE8 and earlier */
   z-index: -1;
 }
 
@@ -88,17 +88,16 @@
 
 #block-block-4 ul li {
   float: left;
-  padding: 0 15px;
+  padding: 0 18px;
 }
 
 #block-block-4 ul li:last-child {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 18px;
 }
 
 #block-block-4 ul li, #block-block-4 ul li a {
   color: #fff;
   text-decoration: none;
-  font-family: 'Terminal Dosis', sans-serif;
   font-size: 1.1em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -129,8 +128,8 @@
   width: 100%;
   height: 100%;
   background-color: #004;
-  opacity:0.6;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
+  opacity:0.75;
+  filter:alpha(opacity=75); /* For IE8 and earlier */
   z-index: -1;
 }
 

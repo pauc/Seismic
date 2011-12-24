@@ -11,11 +11,25 @@ a, a:link, a:visited, a:active {
 }
 
 /*
+ * TIPOGRAFIES
+ */
+div#site-name,
+#block-nice_menus-2,
+h1,
+h2,
+#footer-menu li:first-child a {
+  font-family: 'Letter Gothic', 'Terminal Dosis', 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+  font-family: "Helvetica Neue",Verdana,Tahoma,"DejaVu Sans",sans-serif;
+}
+
+/*
  * TRACTAMENT GENERAL PER ALS TÍTOLS
  */
 h1, h2 {
     text-transform: uppercase;
-    font-family: 'Terminal Dosis', sans-serif;
 }
 
 h1, 
