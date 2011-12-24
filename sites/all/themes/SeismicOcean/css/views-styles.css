@@ -3,4 +3,17 @@
  * Views Styling
  */
 
+#content-area div.view-content {
+  border-top: 1px solid #d1d3d4;
+}
 
+#content-area .views-row {
+  margin: 1.1em 0;
+  border-bottom: 1px solid #d1d3d4;
+  padding-bottom: 1.3em;
+}
+
+span.node_read_more {
+  display: block;
+  text-align: right;
+}

@@ -39,3 +39,16 @@
     font-size: 0.82em;
     line-height: 1.28em;
 }
+
+/*
+ * ANUL·LANT ESTILS DE LES VISTES PER AL VIEWS-SLIDESHOW
+ */
+#content-area .front-slideshow div.view-content {
+  border-top: 0;
+}
+
+#content-area .front-slideshow .views-row {
+  margin: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
