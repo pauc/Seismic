@@ -204,3 +204,53 @@ h3 a:active {
   text-decoration: none;
   background: url("../images/read_more-bg.png") no-repeat left 4px;
 }
+
+/*
+ * ESTILS PER ALS PAGINADORS
+ */
+#top-pager {
+  border-bottom: 1px solid #d1d3d4;
+}
+
+div.pager .pager {
+  float: right;
+}
+
+div.pager .pager li {
+  display: block;
+  float: left;
+  width: 1.5em;
+  height: 1.5em;
+  background: #f1f1f2;
+  padding: 0;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+div.pager .pager li.pager-current {
+  background-color: #dcddde;
+  font-weight: normal;
+}
+
+div.pager .pager li a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+}
+
+div.pager .pager li a:hover {
+  background-color: #dcddde;
+  transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s; /* Firefox 4 */
+  -webkit-transition: background-color 0.4s; /* Safari and Chrome */
+  -o-transition: background-color 0.4s; /* Opera */
+}
+
+div.pager .pager li.pager-next a, 
+div.pager .pager li.pager-previous a {
+  background-color: #f65100;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+

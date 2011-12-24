@@ -53,7 +53,7 @@
   <?php endif; ?>
   
   <?php if ($pager): ?>
-    <div class="top-pager"><?php print $pager; ?></div>
+    <div id="top-pager" class="pager clearfix"><?php print $pager; ?></div>
   <?php endif; ?>
 
   <?php if ($rows): ?>
@@ -67,7 +67,7 @@
   <?php endif; ?>
 
   <?php if ($pager): ?>
-    <div class="bottom-pager"><?php print $pager; ?></div>
+    <div id="bottom-pager" class="pager clearfix"><?php print $pager; ?></div>
   <?php endif; ?>
 
   <?php if ($attachment_after): ?>
