@@ -114,6 +114,14 @@
   color: #000;
 }
 
+#block-block-4 ul li a:hover {
+  color: #000;
+  transition: color 0.6s;
+  -moz-transition: color 0.6s; /* Firefox 4 */
+  -webkit-transition: color 0.6s; /* Safari and Chrome */
+  -o-transition: color 0.6s; /* Opera */
+}
+
 /*
  * ESTILS PER AL BLOC AMB LOGOS D'INSTITUCIONS A LA REGIÓ FOOTER
  */

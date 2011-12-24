@@ -13,6 +13,11 @@ a, a:link, a:visited, a:active {
 /*
  * TIPOGRAFIES
  */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../typos/HelveticaNeue-LightCond.otf');
+}
+
 div#site-name,
 #block-nice_menus-2,
 h1,
