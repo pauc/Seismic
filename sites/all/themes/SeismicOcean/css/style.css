@@ -202,16 +202,12 @@ h3 a:active {
 .node_read_more a {
   padding-left: 13px;
   text-decoration: none;
-  background: url("../images/read_more-bg.png") no-repeat left 4px;
+  background: url("../images/read_more-bg.png") no-repeat left 2px;
 }
 
 /*
  * ESTILS PER ALS PAGINADORS
  */
-#top-pager {
-  border-bottom: 1px solid #d1d3d4;
-}
-
 div.pager .pager {
   float: right;
 }
@@ -253,4 +249,20 @@ div.pager .pager li.pager-previous a {
   line-height: 1em;
 }
 
+/*
+ * ESTILS PER A LES LLISTES DE CONTINGUTS (VIEWS)
+ */
+#content-area div.view-content {
+  border-top: 1px solid #d1d3d4;
+}
 
+#content-area .views-row {
+  margin: 1.1em 0;
+  border-bottom: 1px solid #d1d3d4;
+  padding-bottom: 1.3em;
+}
+
+span.node_read_more {
+  display: block;
+  text-align: right;
+}
