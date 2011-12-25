@@ -248,3 +248,76 @@ div.pager .pager li.pager-previous a {
   font-size: 1.5em;
   line-height: 1em;
 }
+
+/*
+ * ESTILS PER A LA PÀGINA DE CONTACTE
+ */
+#contact-mail-page .contact-form-content {
+  width: 600px;
+  padding: 20px 20px 30px;
+  background-color: #ebf6f9;
+}
+
+#contact-mail-page .contact-form-content p {
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d1d3d4;
+  font-weight: bold;
+}
+
+#contact-mail-page .contact-form-content .form-item {
+  width: 600px;
+  float: left;
+}
+
+#contact-mail-page .contact-form-content .form-item label {
+  width: 110px;
+  float: left;
+  text-align: right;
+}
+
+#contact-mail-page .contact-form-content .form-item input,
+#contact-mail-page .contact-form-content .form-item textarea {
+  border: 1px solid #d1d3d4;
+}
+
+#contact-mail-page .contact-form-content .form-item input,
+#contact-mail-page .contact-form-content .form-item textarea {
+  width: 375px;
+}
+
+#contact-mail-page .contact-form-content .form-item .resizable-textarea {
+  width: auto;
+  float: left;
+}
+
+#contact-mail-page .contact-form-content .form-item input,
+#contact-mail-page .contact-form-content .form-item .resizable-textarea {
+  margin-left: 15px;
+}
+
+#contact-mail-page .contact-form-content #edit-submit {
+  float: right;
+  clear: both;
+  margin-top: 15px;
+  margin-right: 98px;
+  padding: 5px 15px;
+  background: #f35200;
+  border: 0;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#contact-mail-page .contact-form-content #edit-submit:hover {
+  color: #000;
+  transition: color 0.4s;
+  -moz-transition: color 0.4s; /* Firefox 4 */
+  -webkit-transition: color 0.4s; /* Safari and Chrome */
+  -o-transition: color 0.4s; /* Opera */
+}
+
+#contact-mail-page .contact-form-content .form-required {
+  display: none;
+}

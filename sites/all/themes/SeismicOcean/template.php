@@ -70,7 +70,10 @@ function SeismicOcean_theme(&$existing, $type, $theme, $path) {
   /*
   $hooks['hook_name_here'] = array( // Details go here );
   */
-  // @TODO: Needs detailed comments. Patches welcome!
+  $hooks['contact_mail_page'] = array(
+    'arguments' => array('form' => NULL),
+    'template' => 'templates/contact-mail-page',
+  );
   return $hooks;
 }
 

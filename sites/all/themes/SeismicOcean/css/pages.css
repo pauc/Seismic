@@ -138,7 +138,9 @@ div#site-name /* The name of the website */ {
 }
 
 .breadcrumb span {
+  padding: 0 2px;
   color: #2bd0f4;
+  font-size: 1.2em;
 }
 
 h1.title, /* The title of the page */
