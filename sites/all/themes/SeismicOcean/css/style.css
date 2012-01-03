@@ -1,5 +1,6 @@
 body {
-  color: #777;
+  color: #808285;
+  text-rendering: optimize-legibility;
 }
 
 /*
@@ -18,12 +19,17 @@ a, a:link, a:visited, a:active {
   src: url('../typos/HelveticaNeue-LightCond.otf');
 }
 
+@font-face {
+  font-family: Walkway;
+  src: url('../typos/WalkwayCondensedBold.ttf')
+}
+
 div#site-name,
 #block-nice_menus-2,
 h1,
 h2,
 #footer-menu li:first-child a {
-  font-family: 'Letter Gothic', 'Terminal Dosis', 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
+  font-family: 'Letter Gothic', 'Terminal Dosis', Walkway, 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
 }
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset {

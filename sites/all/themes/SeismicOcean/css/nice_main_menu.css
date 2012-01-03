@@ -18,7 +18,8 @@
   height: auto;
   overflow: visible;
   font-size: 0.90em;
-  letter-spacing: 0.12em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
 }
 
 #block-nice_menus-2 .content {
@@ -26,13 +27,13 @@
 }
 
 #block-nice_menus-2 .nice-menu a:link, .nice-menu a:visited, .nice-menu a:active {
-    color: #000;
+    color: #1a1a1a;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 #block-nice_menus-2 .nice-menu ul a:link, .nice-menu ul a:visited, .nice-menu ul a:active {
-    color: #000;
+    color: #222;
     font-size: 1em;
     text-decoration: none;
     //text-transform: capitalize;
@@ -47,7 +48,7 @@
 
 #block-nice_menus-2 ul.nice-menu li {
   border-top: 0;
-  float: left; /* LTR */    
+  float: left; /* LTR */
 }
 
 #block-nice_menus-2 ul.nice-menu a {
@@ -55,13 +56,13 @@
 }
 
 #block-nice_menus-2 ul.nice-menu>li>a {
-  padding: 0.4em 0 0.4em;
+  padding-top: 5px;
 }
 
 #block-nice_menus-2 ul.nice-menu ul {
   visibility: hidden;
   width: 100%;
-  top: 2.05em;
+  top: 26px;
   left: -1px; /* LTR */
   border: 0;
   margin-right: 0; /* LTR */
@@ -93,46 +94,54 @@
 
 #block-nice_menus-2 ul.nice-menu-down>li {
   background-color: #2bd0f4;
-  text-align: center;
+  text-align: center;      
+  height: 26px;
 }
 
 #block-nice_menus-2 ul.nice-menu-down>li {
-  width: 110px;
+  width: 116px;
 }
 
 /*
- * Different width for 2nd and 3rd li
+ * Different width for 2nd li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li {
-  width: 95px;
+  width: 100px;
+}
+
+/*
+ * Different width for 3rd li
+ */
+#block-nice_menus-2 ul.nice-menu-down>li + li + li {
+  width: 120px;
 }
 
 /*
  * Different width for 4th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li {   
-  width: 130px;
+  width: 135px;
 }
 
 /*
  * Different width for 5th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li {   
-  width: 75px;
+  width: 77px;
 }
 
 /*
  * Different width for 6th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li {
-  width: 70px;
+  width: 64px;
 }
 
 /*
  * Different width for 7th li
  */
 #block-nice_menus-2 ul.nice-menu-down>li + li + li + li + li + li + li {
-  width: 95px;
+  width: 110px;
 }
 
 #block-nice_menus-2 ul.nice-menu-down li li {
