@@ -12,11 +12,6 @@
   overflow: hidden;
 }
 
-.region-under-content .block.even {
-  float: left;
-  margin-right: 15px;
-}
-
 .sidebar div.block .content, .region-under-content div.block .content {
   padding: 10px;  
   background-color: #fff;
@@ -54,14 +49,55 @@
 /*
  * ESTILS PER AL BLOCK POSEIDON (front)
  */
+#block-views-poseidon-block_1 {
+  position: relative;
+  background: transparent;
+}
 
-#block-block-1 h2 {
-  height: 78px;
+#block-views-poseidon-block_1 h2 {
+  height: 72px;
+  padding: 18px 100px 0 68px;
+  font-size: 1.95em;
+  line-height: 1em;
   background: url(../images/block-poseidon-h2-bg.png) right top no-repeat;
 }
 
-#block-block-1 .content {
-  min-height: 29em;
+#block-views-poseidon-block_1 h2:first-line {
+  font-weight: bold;
+  line-height: 1em;
+}
+
+#block-views-poseidon-block_1 .content {
+  min-height: 28em;
+}
+
+#block-views-poseidon-block_1 img.imagefield-field_project_logo {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+
+#block-views-poseidon-block_1 .views-field-field-project-summary-value {
+  border-bottom: 1px solid #ccc;
+}
+
+#block-views-poseidon-block_1 .views-field-view-node {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 6px;
+  background-color: #ec7400;
+  border-radius: 6px;
+}
+
+#block-views-poseidon-block_1 .views-field-view-node a {
+  text-decoration: none;
+  color: #fff;  
+}
+
+#block-views-poseidon-block_1 .views-field-view-node a:before {
+  content: "›";
+  margin-right: 6px;
 }
 
 /*
@@ -76,18 +112,18 @@
   text-transform: uppercase;
 }
 
-#block-views-projects-block_1 .views-field-teaser {
+#block-views-projects-block_1 .views-field-nothing {
   margin-top: 3px;
   margin-bottom: 5px;
-  padding: 10px 7px;
+  padding: 10px 7px 4px;
   background-color: #ebf6f9;
 }
 
-#block-views-projects-block_1 .views-field-teaser p:first-child {
+#block-views-projects-block_1 .views-field-nothing p:first-child {
   margin-top: 0;
 }
 
-#block-views-projects-block_1 .views-field-teaser p:last-child {
+#block-views-projects-block_1 .views-field-nothing p:last-child {
   margin-bottom: 0;
 }
 

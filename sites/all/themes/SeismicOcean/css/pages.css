@@ -292,7 +292,8 @@ ul.links li {
 /*
  * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
  */
-.clearfix:after {
+.clearfix:after, 
+.region-under-content:after {
   content: ".";
   display: block;
   height: 0;

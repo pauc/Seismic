@@ -187,8 +187,6 @@
         <?php print $content_bottom; ?>
 
       </div></div><!-- /.section, /#content -->
-      
-      <?php print $under_content; ?>
 
       <?php if ($primary_links || $navigation): ?>
         <div id="navigation"><div class="section clearfix">
@@ -220,6 +218,8 @@
       <?php print $sidebar_second; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
+    
+    <?php print $under_content; ?>
 
     <?php if ($footer || $footer_message || $secondary_links): ?>
       <div id="footer"><div class="section">
