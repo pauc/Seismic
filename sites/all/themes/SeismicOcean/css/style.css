@@ -75,11 +75,15 @@ h3 a:active {
   border-bottom: 1px solid #aaa;
 }
 
+.front .sidebar div.block.first {
+  min-height: 35.85em;
+}
+
 .region-under-content {
-  width: 646px;
+  width: 645px;
   margin-top: 40.15em;
-  margin-left: 334px; /* LTR */ /* The width of .region-sidebar-first. */
-  margin-right: -980px; /* LTR */ /* Negative value of #content's width + left margin. */
+  margin-left: 330px; /* LTR */ /* The width of .region-sidebar-first. */
+  margin-right: -975px; /* LTR */ /* Negative value of #content's width + left margin. */
   float: left;
 }
 
@@ -181,25 +185,6 @@ h3 a:active {
  */
 #content h1 {
   margin-bottom: 20px;
-}
-
-/*
- * ESTILS PER ALS BLOCKS
- */
-.block h2 {
-  height: 32px;
-  padding: 8px 0 0 10px;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: normal;
-  background: #606060; /* Old browsers */
-  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
-  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
 /*

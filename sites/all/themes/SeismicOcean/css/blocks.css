@@ -6,15 +6,15 @@
 
 .sidebar div.block, .region-under-content div.block /* Block wrapper */ {
   /* margin-bottom: 1em; */
-  width: 316px;
-  height: 35.85em;
+  width: 315px;
+  height: 30.85em;
   float: left;
   overflow: hidden;
 }
 
 .region-under-content .block.even {
   float: left;
-  margin-right: 14px;
+  margin-right: 15px;
 }
 
 .sidebar div.block .content, .region-under-content div.block .content {
@@ -34,6 +34,36 @@
   position: relative;
   margin-bottom: 15px;
 }
+
+.block h2 {
+  height: 32px;
+  padding: 8px 0 0 10px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: normal;
+  background: #606060; /* Old browsers */
+  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+/*
+ * ESTILS PER AL BLOCK POSEIDON (front)
+ */
+
+#block-block-1 h2 {
+  height: 78px;
+  background: url(../images/block-poseidon-h2-bg.png) right top no-repeat;
+}
+
+#block-block-1 .content {
+  min-height: 29em;
+}
+
 /*
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
@@ -157,8 +187,6 @@
 #logo_UTM {
   width: 70px;
 }
-
-
 
 .block.first /* The first block in the region */ {
 }

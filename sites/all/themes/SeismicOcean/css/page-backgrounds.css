@@ -46,7 +46,7 @@ div.block {
 }
 
 #block-block-1 {
-  background-color: #fff; // s'haurà de canviar a transparent més endavant
+  background-color: transparent;
 }
 
 #block-block-3,
