@@ -78,6 +78,10 @@ h3 a:active {
   min-height: 35.85em;
 }
 
+.front #content .section {
+  padding: 10px;
+}
+
 .front .node .content {
   padding-bottom: 4px;
   border-bottom: 1px solid #ccc;
@@ -88,7 +92,7 @@ h3 a:active {
 }
 
 /*
- * REGIÓ ENTRE EL CONTINGUT I EL FOOTER
+ * REGIÓ ENTRE EL CONTINGUT I EL FOOTER (REGION-UNDER-CONTENT)
  */
 .region-under-content {
   width: 100%;
@@ -109,7 +113,6 @@ h3 a:active {
  */
 .region-top {
   width: 100%;
-  position: absolute;
   top: 0;
   font-size: 0.8em;
   z-index: 50;
@@ -216,9 +219,74 @@ h3 a:active {
 /*
  * ESTILS PER AL CONTINGUT DELS PROJECTES
  */
-#content-area .node-type-project {
-  margin-left: 310px;
+#content-area .node-type-project .content {
+  margin-left: 298px;
   margin-right: 10px;
+  padding-top: 20px;
+}
+
+#content-area .node-type-project #project_extra_fields {
+  width: 278px;
+  float: left;
+  background-color: #dbeff4;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header {
+  position: relative;
+  background: #000 url(../images/white-square.png) no-repeat 215px top;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header img {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2 {
+  margin: 0;
+  padding: 18px 20px 0 68px;
+  color: #fff;
+  font-size: 1.95em;
+  height: 72px;
+  line-height: 1em;
+  font-weight: normal;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2:first-line {
+  font-weight: bold;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content {
+  padding: 10px;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field {
+  margin: 5px 0 15px;
+  padding-right: 5px;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field:last-child {
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field .field-label {
+  margin-right: 3px;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field ul {
+  margin: 5px 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field ul li:before {
+  content: "- ";
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field ul li {
+  margin: 10px 0;
 }
 
 #content-area .node-type-project .field-label {
@@ -269,10 +337,6 @@ h3 a:active {
 
 #content-area .node-type-project .field-field-project-body-participants ul li {
   margin: 0.4em 0;
-}
-
-#content-area .node-type-project .field-field-project-objectives {
-  clear: both;
 }
 
 #content-area .node-type-project .project-task-image {
