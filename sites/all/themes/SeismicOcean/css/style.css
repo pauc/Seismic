@@ -417,7 +417,6 @@ div.pager .pager li.pager-previous a {
  * ESTILS PER A LA PÀGINA DE CONTACTE
  */
 #contact-mail-page .contact-form-content {
-  width: 600px;
   padding: 20px 20px 30px;
   background-color: #ebf6f9;
 }
@@ -464,14 +463,15 @@ div.pager .pager li.pager-previous a {
   float: right;
   clear: both;
   margin-top: 15px;
-  margin-right: 98px;
-  padding: 5px 15px;
+  margin-right: 65px;
+  padding: 5px 25px;
   background: #f35200;
   border: 0;
   -moz-border-radius: 8px;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #contact-mail-page .contact-form-content #edit-submit:hover {

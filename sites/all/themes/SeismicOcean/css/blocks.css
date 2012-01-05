@@ -103,7 +103,7 @@
 /*
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
-#block-views-projects-block_1 .views-field-title {
+.view-id-projects.view-display-id-block_1 .views-field-title {
   padding: 5px 7px;
   background-color: #2bd0f4;
   border: 0;
@@ -112,18 +112,18 @@
   text-transform: uppercase;
 }
 
-#block-views-projects-block_1 .views-field-nothing {
+.view-id-projects.view-display-id-block_1 .views-field-nothing {
   margin-top: 3px;
   margin-bottom: 5px;
   padding: 10px 7px 4px;
   background-color: #ebf6f9;
 }
 
-#block-views-projects-block_1 .views-field-nothing p:first-child {
+.view-id-projects.view-display-id-block_1 .views-field-nothing p:first-child {
   margin-top: 0;
 }
 
-#block-views-projects-block_1 .views-field-nothing p:last-child {
+.view-id-projects.view-display-id-block_1 .views-field-nothing p:last-child {
   margin-bottom: 0;
 }
 
