@@ -222,7 +222,10 @@ h3 a:active {
 #content-area .node-type-project .content {
   margin-left: 298px;
   margin-right: 10px;
+  margin-bottom: 20px;
   padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 #content-area .node-type-project #project_extra_fields {
@@ -243,11 +246,11 @@ h3 a:active {
 }
 
 #content-area .node-type-project #project_extra_fields .extra-fields-header h2 {
+  height: 80px;
   margin: 0;
   padding: 18px 20px 0 68px;
   color: #fff;
-  font-size: 1.95em;
-  height: 72px;
+  font-size: 28px;
   line-height: 1em;
   font-weight: normal;
 }
@@ -349,6 +352,21 @@ h3 a:active {
   margin-top: 0;
   margin-bottom: 0.5em;
   color: #2bd0f4;
+}
+
+/* PER ALS PROJECTES SECUNDARIS I ALTRES PROJECTES */
+#content-area .node-type-secondary-project #project_extra_fields .extra-fields-header h2 {
+  padding-left: 12px;
+}
+
+/* ESPECÍFIC PER A OCEANSEIS */
+.node-type-secondary-project ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.node-type-secondary-project ol li {
+  margin: 10px 0;
 }
 
 /*

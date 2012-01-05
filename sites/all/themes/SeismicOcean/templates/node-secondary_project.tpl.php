@@ -71,7 +71,7 @@
  * @see zen_process()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> node-type-project clearfix">
   <?php print $user_picture; ?>
 
   <?php if (!$page && $title): ?>
@@ -98,8 +98,8 @@
   
   <div id="project_extra_fields">
     <div class="extra-fields-header">
-      <?php print $field_project_logo[0]['view']; ?>
-      <h2><?php print $title; ?> project</h2>
+      <?php if($field_project_logo) print $field_project_logo[0]['view']; ?>
+      <h2><?php print $title; ?></h2>
     </div>
     <div class="extra-field-project-image">
       <?php print $field_project_image[0]['view']; ?>
@@ -117,30 +117,39 @@
         </span>
         <?php print $title; ?>
       </div>
-      <div class="extra-field">
-        <span class="field-label">
-          <?php print $node->content['field_project_founding']['field']['#title']; ?>:        
-        </span>
-        <?php print $field_project_founding[0]['view']; ?>
-      </div>
-      <div class="extra-field">
-        <span class="field-label">
-          <?php print $node->content['field_project_reference']['field']['#title']; ?>:        
-        </span>
-        <?php print $field_project_reference[0]['view']; ?>
-      </div>
-      <div class="extra-field">
-        <span class="field-label">
-          <?php print $node->content['field_project_dates']['field']['#title']; ?>:        
-        </span>
-        <?php print $field_project_dates[0]['view']; ?>
-      </div>
-      <div class="extra-field">
-        <span class="field-label">
-          <?php print $node->content['field_project_pi']['field']['#title']; ?>:        
-        </span>
-        <?php print $field_project_pi[0]['view']; ?>
-      </div>
+      <?php if ($field_project_founding): ?>
+        <div class="extra-field">
+          <span class="field-label">
+            <?php print $node->content['field_project_founding']['field']['#title']; ?>:        
+          </span>
+          <?php print $field_project_founding[0]['view']; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($field_project_dates[0]['value'] != NULL): ?>
+        <div class="extra-field">
+          <span class="field-label">
+            <?php print $node->content['field_project_dates']['field']['#title']; ?>:        
+          </span>
+          <?php print $field_project_dates[0]['view']; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($field_project_pi[0]['value'] != NULL): ?>
+        <div class="extra-field">
+          <span class="field-label">
+            <?php print $node->content['field_project_pi']['field']['#title']; ?>:        
+          </span>
+          <?php print $field_project_pi[0]['view']; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($field_project_supervisors[0]['value'] != NULL): ?>
+        <div class="extra-field">
+          <span class="field-label">
+            <?php print $node->content['field_project_supervisors']['field']['#title']; ?>:        
+          </span>
+          <?php print $field_project_supervisors[0]['value']; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($field_project_participants[0]['value'] != NULL): ?>
       <div class="extra-field participants">
         <span class="field-label">
           <?php print $node->content['field_project_participants']['field']['#title']; ?>:        
@@ -154,12 +163,15 @@
           <?php endforeach;?>          
         </ul>
       </div>
-      <div class="extra-field">
-        <span class="field-label">
-          <?php print $node->content['field_project_url']['field']['#title']; ?>:        
-        </span>
-        <?php print $field_project_url[0]['view']; ?>
-      </div>
+      <?php endif; ?>
+      <?php if ($field_project_url[0]['value'] != NULL): ?>
+        <div class="extra-field">
+          <span class="field-label">
+            <?php print $node->content['field_project_url']['field']['#title']; ?>:        
+          </span>
+          <?php print $field_project_url[0]['view']; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 
