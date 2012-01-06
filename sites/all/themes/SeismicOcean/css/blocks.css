@@ -85,9 +85,9 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  padding: 6px;
+  padding: 4px 12px;
   background-color: #ec7400;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 #block-views-poseidon-block_1 .views-field-view-node a {
@@ -104,12 +104,14 @@
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
 .view-id-projects.view-display-id-block_1 .views-field-title {
-  padding: 5px 7px;
+  padding: 4px 7px;
   background-color: #2bd0f4;
   border: 0;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  color: #fff;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .view-id-projects.view-display-id-block_1 .views-field-nothing {
@@ -123,8 +125,8 @@
   margin-top: 0;
 }
 
-.view-id-projects.view-display-id-block_1 .views-field-nothing p:last-child {
-  margin-bottom: 0;
+.view-id-projects.view-display-id-block_1 .views-field-nothing p {
+  margin-bottom: 0.5em;
 }
 
 /*

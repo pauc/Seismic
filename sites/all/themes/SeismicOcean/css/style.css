@@ -4,7 +4,7 @@ body {
 }
 
 /*
- * TRACTAMENT GENERAL DELS ENLLAÇOS
+ * TRACTAMENT DELS ENLLAÇOS
  */
 a, a:link, a:visited, a:active {
     color: #ec7400;
@@ -17,6 +17,51 @@ a:hover {
   -moz-transition: color 0.5s; /* Firefox 4 */
   -webkit-transition: color 0.5s; /* Safari and Chrome */
   -o-transition: color 0.5s; /* Opera */
+}
+
+/* READ MORE AMB CANTOS RODONNS */
+
+#block-views-poseidon-block_1 .views-field-view-node {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  background-color: #ec7400;
+  border-radius: 8px;
+}
+
+#block-views-poseidon-block_1 .views-field-view-node a {
+  text-decoration: none;
+  color: #fff;  
+}
+
+#block-views-poseidon-block_1 .views-field-view-node a:before,
+.view-footer a:before {
+  content: "›";
+  margin-right: 6px;
+}
+
+.view-footer {
+  border-top: 1px solid #ccc;
+  text-align: right;
+}
+
+.view-footer a {
+  background-color: #ec7400;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-footer a,
+#block-views-poseidon-block_1 .views-field-view-node
+ {
+  transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s; /* Firefox 4 */
+  -webkit-transition: background-color 2s; /* Safari and Chrome */
+  -o-transition: background-color 2s; /* Opera */
+  
 }
 
 /*
