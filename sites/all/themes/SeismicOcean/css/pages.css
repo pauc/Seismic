@@ -293,7 +293,9 @@ ul.links li {
  * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
  */
 .clearfix:after, 
-.region-under-content:after {
+.region-under-content:after,
+.project-preview .views-row:after,
+.other-projects .view-content:after {
   content: ".";
   display: block;
   height: 0;

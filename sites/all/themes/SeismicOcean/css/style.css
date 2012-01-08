@@ -21,7 +21,7 @@ a:hover {
 
 /* READ MORE AMB CANTOS RODONNS */
 
-#block-views-poseidon-block_1 .views-field-view-node {
+.views-field-view-node {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -30,12 +30,11 @@ a:hover {
   border-radius: 8px;
 }
 
-#block-views-poseidon-block_1 .views-field-view-node a {
+.views-field-view-node a {
   text-decoration: none;
   color: #fff;  
 }
-
-#block-views-poseidon-block_1 .views-field-view-node a:before,
+.views-field-view-node a:before,
 .view-footer a:before {
   content: "›";
   margin-right: 6px;
@@ -46,22 +45,15 @@ a:hover {
   text-align: right;
 }
 
-.view-footer a {
+a.read_m-border_rd {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   background-color: #ec7400;
   border-radius: 8px;
   padding: 4px 12px;
   color: #fff;
   text-decoration: none;
-}
-
-.view-footer a,
-#block-views-poseidon-block_1 .views-field-view-node
- {
-  transition: background-color 0.4s;
-  -moz-transition: background-color 0.4s; /* Firefox 4 */
-  -webkit-transition: background-color 2s; /* Safari and Chrome */
-  -o-transition: background-color 2s; /* Opera */
-  
 }
 
 /*
@@ -262,6 +254,224 @@ h3 a:active {
 }
 
 /*
+ * ESTILS PER A LA PÀGINA AMB TOTS ELS PROJECTES
+ */
+#content-area .project-preview div.view-content {
+  border-top: 0;
+}
+
+#content-area .project-preview .views-row {
+  position: relative;
+  background: #ebf6f9;
+  border-bottom: 0;
+  padding: 0;
+  border-radius: 15px 0 0 0;
+}
+
+.project-preview .col-1, 
+.project-preview .col-2, 
+.project-preview .col-3 {
+  float: left;
+}
+
+.project-preview .col-2, 
+.project-preview .col-3 {
+  width: 300px;
+  margin-left: 15px;
+  padding: 18px 0;
+}
+
+.project-preview .col-3 {
+  margin-left: 25px;
+}
+
+.project-preview-header {
+  position: relative;
+  padding: 18px 20px 18px 68px;
+  background: #606060; /* Old browsers */
+  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-radius: 15px 0 0 0;
+}
+
+.project-preview-header img {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+
+.project-preview-header h2 {
+  width: 185px;
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1em;  
+}
+
+.project-preview-header h2:first-line {
+  font-weight: bold;
+}
+
+.project-preview .col-1 .imagecache {
+  margin-bottom: -3px;
+}
+
+.project-preview .field-label,
+.secondary-projects label, .other-projects-page label {
+  margin-right: 3px;
+  color: #F35200;
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.project-preview div.field {
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-preview .field-acronym {
+  text-transform: uppercase;
+}
+
+.project-preview .participants .field-item {
+  margin: 6px 0;
+}
+
+.project-preview .participants .field-item:before {
+  content: "- ";
+}
+
+.project-preview.secondary-projects .project-preview-header,
+.project-preview.other-projects-page .project-preview-header {
+  padding: 18px 12px;
+}
+
+#content-area .project-preview.secondary-projects .views-row,
+#content-area .project-preview.other-projects-page .views-row 
+{
+  position: relative;
+  min-height: 202px;
+  padding-left: 278px;
+  overflow: hidden;
+}
+
+.project-preview.secondary-projects .views-field-nothing,
+.project-preview.other-projects-page .views-field-nothing {
+  width: 278px;
+  position: absolute;
+  left: 0;
+}
+
+.project-preview.secondary-projects .views-field-field-project-title-value,
+.project-preview.secondary-projects .views-field-field-project-pi-value,
+.project-preview.secondary-projects .views-field-field-project-supervisors-value,
+.project-preview.secondary-projects .views-field-title,
+.project-preview.secondary-projects .views-field-field-project-founding-value,
+.project-preview.secondary-projects .views-field-field-project-reference-value,
+.project-preview.secondary-projects .views-field-field-project-dates-value,
+.project-preview.secondary-projects .views-field-field-project-participants-value,
+.project-preview.secondary-projects .views-field-field-project-participants-value,
+.project-preview.secondary-projects .views-field-field-project-url-url,
+.project-preview.other-projects-page .views-field-field-project-title-value,
+.project-preview.other-projects-page .views-field-field-project-pi-value,
+.project-preview.other-projects-page .views-field-field-project-supervisors-value,
+.project-preview.other-projects-page .views-field-title,
+.project-preview.other-projects-page .views-field-field-project-founding-value,
+.project-preview.other-projects-page .views-field-field-project-reference-value,
+.project-preview.other-projects-page .views-field-field-project-dates-value,
+.project-preview.other-projects-page .views-field-field-project-participants-value,
+.project-preview.other-projects-page .views-field-field-project-participants-value,
+.project-preview.other-projects-page .views-field-field-project-url-url  
+{
+  width: 300px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-preview.secondary-projects .views-field-field-project-title-value,
+.project-preview.other-projects-page .views-field-field-project-title-value
+{
+  margin-top: 26px;
+}
+
+.project-preview.secondary-projects .views-row>div + div,
+.project-preview.other-projects-page  .views-row>div + div 
+{
+  margin-top: 26px;
+}
+
+.project-preview.secondary-projects .views-row>div + div + div + div,
+.project-preview.other-projects-page .views-row>div + div + div + div {
+  margin-top: 8px;
+}
+
+.views-field-field-project-participants-value .field-item {
+  margin: 4px 0;
+}
+
+.project-preview.other-projects-page .views-field-field-project-participants-value {
+  float: right;
+}
+
+.views-field-field-project-participants-value .field-item:before {
+  content: "- ";
+}
+
+#content-area .project-preview.other-projects {
+  background: #ebf6f9;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  float: left;
+  width: 100%;
+}
+
+.other-projects .view-content {
+  margin: 0 12px 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-preview.other-projects .view-header {
+  padding: 4px 12px;
+  background: #606060; /* Old browsers */
+  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project-preview.other-projects .view-header p {
+  margin: 0;
+}
+
+#content-area .project-preview.other-projects .views-row {
+  width: 300px;
+  float: left;
+  margin: 12px 0 12px;
+  padding-right: 15px;
+}
+
+.project-preview.other-projects-page .view-header {
+  display: none;
+}
+/*
  * ESTILS PER AL CONTINGUT DELS PROJECTES
  */
 #content-area .node-type-project .content {
@@ -291,9 +501,8 @@ h3 a:active {
 }
 
 #content-area .node-type-project #project_extra_fields .extra-fields-header h2 {
-  height: 80px;
   margin: 0;
-  padding: 18px 20px 0 68px;
+  padding: 18px 20px 18px 68px;
   color: #fff;
   font-size: 28px;
   line-height: 1em;
@@ -319,10 +528,6 @@ h3 a:active {
   border-bottom: 1px solid #ccc;
 }
 
-#content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field .field-label {
-  margin-right: 3px;
-}
-
 #content-area .node-type-project #project_extra_fields .extra-fields-content .extra-field ul {
   margin: 5px 0;
   padding-left: 0;
@@ -338,6 +543,7 @@ h3 a:active {
 }
 
 #content-area .node-type-project .field-label {
+  margin-right: 3px;
   color: #f35200;
   text-transform: uppercase;
   font-size: 1em;
@@ -387,13 +593,14 @@ h3 a:active {
   margin: 0.4em 0;
 }
 
-#content-area .node-type-project .project-task-image {
+#content-area .node-type-project .project-task-image,
+#content-area .node-type-project .project-image {
   width: 100% !important;
   height: auto !important;
   outline: 1px solid #ddd;
 }
 
-#content-area .node-type-project .project-task-image-description p {
+#content-area .node-type-project .project-image-description p {
   margin-top: 0;
   margin-bottom: 0.5em;
   color: #2bd0f4;

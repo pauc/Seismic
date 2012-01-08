@@ -81,25 +81,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-#block-views-poseidon-block_1 .views-field-view-node {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 4px 12px;
-  background-color: #ec7400;
-  border-radius: 8px;
-}
-
-#block-views-poseidon-block_1 .views-field-view-node a {
-  text-decoration: none;
-  color: #fff;  
-}
-
-#block-views-poseidon-block_1 .views-field-view-node a:before {
-  content: "›";
-  margin-right: 6px;
-}
-
 /*
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
