@@ -19,6 +19,12 @@ a:hover {
   -o-transition: color 0.5s; /* Opera */
 }
 
+.node_read_more a {
+  padding-left: 13px;
+  text-decoration: none;
+  background: url("../images/read_more-bg.png") no-repeat left 2px;
+}
+
 /* READ MORE AMB CANTOS RODONNS */
 
 .views-field-view-node {
@@ -244,13 +250,19 @@ h3 a:active {
   margin-bottom: 20px;
 }
 
+.image-description {
+}
+
 /*
- * ESTILS PER ALS "read more"
+ * SEISMIC OCEANOGRAPHY PAGE
  */
-.node_read_more a {
-  padding-left: 13px;
-  text-decoration: none;
-  background: url("../images/read_more-bg.png") no-repeat left 2px;
+body.node-tipe-front-page #content {
+  
+}
+
+.node-type-front-page.node img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 /*
