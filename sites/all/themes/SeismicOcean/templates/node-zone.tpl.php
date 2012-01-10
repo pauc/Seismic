@@ -71,9 +71,6 @@
  * @see zen_process()
  */
 ?>
-<?php
-  drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu.js', 'theme');
-?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php print $user_picture; ?>
@@ -102,7 +99,17 @@
 
   <div class="content">
     <?php print $content; ?>
-    <?php if(!$teaser) print views_embed_view('areas', 'page_1', $nid); ?>
+    <?php if(!$teaser): ?>
+      <div id="map">
+        <?php print views_embed_view('areas', 'page_1', $nid); ?>
+      </div>
+      <div id="map-menu">
+      <?php
+          $block = (object) module_invoke('menu_block', 'block', 'view', 1);
+          print theme('block', $block);
+      ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php print $links; ?>

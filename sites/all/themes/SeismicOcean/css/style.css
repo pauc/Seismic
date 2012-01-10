@@ -634,6 +634,72 @@ body.node-tipe-front-page #content {
 }
 
 /*
+ * ESTILS PER A LES PÀGINES AMB MAPES 
+ */
+#map {
+  width: 695px;
+  float: left;
+  margin-right: 20px
+}
+
+#map-menu {
+  width: 220px;
+  float: left;
+  background-color: #ebf6f9;
+  text-transform: uppercase;
+}
+
+#map-menu .content {
+  font-size: 0.875em;
+  padding: 0 10px 10px;
+  background: #ebf6f9;
+}
+
+#map-menu ul {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  background: #ebf6f9 url(../images/sepr.png) repeat-x bottom;
+}
+
+#map-menu ul ul {
+  padding: 0 0 0 20px;
+}
+
+#map-menu li {
+  position: relative;
+  clear: both;
+  list-style: none;  
+}
+
+#map-menu div.map-menu-link {
+  padding: 6px 0 8px;
+  background: transparent url(../images/sepr.png) repeat-x bottom;
+}
+
+#map-menu li li li div.map-menu-link {
+  background-image: none;
+}
+
+#map-menu li li li.theme-collapsed>div.map-menu-link {
+  background-image: url(../images/sepr.png);
+}
+
+#map-menu li div.exp-col {
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#map-menu a {
+  text-decoration: none;
+}
+
+/*
  * ESTILS PER ALS PAGINADORS
  */
 div.pager .pager {

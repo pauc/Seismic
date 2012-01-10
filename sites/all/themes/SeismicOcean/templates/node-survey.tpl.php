@@ -102,7 +102,17 @@
 
   <div class="content">
     <?php print $content; ?>
-    <?php if(!$teaser) print views_embed_view('lines', 'page_1', $nid); ?>
+    <?php if(!$teaser): ?>
+      <div id="map">
+        <?php print views_embed_view('lines', 'page_1', $nid); ?>
+      </div>
+      <div id="map-menu">
+      <?php
+          $block = (object) module_invoke('menu_block', 'block', 'view', 1);
+          print theme('block', $block);
+      ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php print $links; ?>

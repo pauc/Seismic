@@ -85,7 +85,14 @@ function zen_menu_item__menu_block__1($link, $has_children, $menu = '', $in_acti
   if ($in_active_trail) {
     $class .= ' active-trail';
   }
-  return '<li class="'. $class .'">'. $link . " + " . $menu ."</li>\n";
+  
+  $ret = '<li class="'. $class .'"><div class="map-menu-link clearfix">'. $link . "</div>" ;  
+  if ($has_children) {
+    $ret .= '<div class="exp-col"></div>';
+  }  
+  $ret .= $menu ."</li>\n";
+  
+  return $ret;
 }
 
 /**
@@ -346,9 +353,13 @@ function SeismicOcean_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function SeismicOcean_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  $node = $vars['node'];
+  $type = $node->type;
+  
+  if ($type == 'main_map' || $type == 'zone' || $type == 'area' || $type == 'survey' || $type == 'line') {
+    drupal_add_js(path_to_theme() . "/js/col-expand-map-menu.js", "theme");    
+  }
 
   // Optionally, run node-type-specific preprocess functions, like
   // SeismicOcean_preprocess_node_page() or SeismicOcean_preprocess_node_story().
