@@ -775,3 +775,46 @@ div.pager .pager li.pager-previous a {
 .node-form .form-text {
     width: auto;
 }
+
+/*
+ * ESTILS PER A LA PÀGINA D'ADMINISTRACIÓ DE "FRONT_IMAGES"
+ */
+#content-area .view-admin-front-images .views-row {
+  margin: 1.5em 0;
+}
+
+.view-admin-front-images .view-header {
+  margin: 1.5em 0;
+}
+
+.view-admin-front-images .view-header a,
+.view-admin-front-images .views-field-edit-node a, 
+.view-admin-front-images .views-field-delete-node a 
+{
+  padding: 4px 12px;
+  background-color: #EC7400;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-admin-front-images .view-header a {
+  font-weight: bold;
+}
+
+.view-admin-front-images .views-field-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.view-admin-front-images .views-field-field-front-image-fid {
+  margin-bottom: 10px;
+}
+
+.view-admin-front-images .views-field-edit-node,
+.view-admin-front-images .views-field-delete-node
+{
+  display: inline;
+  margin-top: 10px;
+  margin-right: 10px;
+}

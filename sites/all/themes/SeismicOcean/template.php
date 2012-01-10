@@ -85,7 +85,7 @@ function zen_menu_item__menu_block__1($link, $has_children, $menu = '', $in_acti
   if ($in_active_trail) {
     $class .= ' active-trail';
   }
-  return '<li class="'. $class .'">UACA'. $link . $menu ."</li>\n";
+  return '<li class="'. $class .'">'. $link . " + " . $menu ."</li>\n";
 }
 
 /**

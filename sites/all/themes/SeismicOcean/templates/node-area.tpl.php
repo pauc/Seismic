@@ -102,7 +102,7 @@
 
   <div class="content">
     <?php print $content; ?>
-    <?php if(!$teaser) print views_embed_view('areas', 'page_1', $nid); ?>
+    <?php if(!$teaser) print views_embed_view('surveys', 'page_1', $nid); ?>
   </div>
 
   <?php print $links; ?>

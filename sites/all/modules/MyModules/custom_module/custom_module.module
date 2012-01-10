@@ -3,11 +3,48 @@
 function custom_module_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
   switch($op){
     case 'presave':
-      if($node->type == 'subzone'){
+      if($node->type == 'zone'){
+        $node->field_zone_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(POLYGON(" 
+                                                      . $node->field_zone_min_lon[0]['value']
+                                                      . " " 
+                                                      . $node->field_zone_max_lat[0]['value'] 
+                                                      . ", "
+                                                      . $node->field_zone_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_zone_max_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_zone_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_zone_min_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_zone_min_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_zone_min_lat[0]['value']
+                                                      . "))";
+      }
+      if($node->type == 'area'){
         $parent_nid_zone = $node->nodehierarchy_menu_links[0]['pnid'];
         $parent_zone = node_load($parent_nid_zone);
         $parent_zone_title = $parent_zone->title;
         $node->field_subzone_parent_zone_field[0]['value'] = $parent_zone_title;
+        
+        $node->field_area_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(POLYGON(" 
+                                                      . $node->field_area_min_lon[0]['value']
+                                                      . " " 
+                                                      . $node->field_area_max_lat[0]['value'] 
+                                                      . ", "
+                                                      . $node->field_area_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_area_max_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_area_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_area_min_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_area_min_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_area_min_lat[0]['value']
+                                                      . "))";
       }
       if($node->type == 'survey'){
         $parent_nid_subzone = $node->nodehierarchy_menu_links[0]['pnid'];
@@ -19,6 +56,24 @@ function custom_module_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
         $parent_zone = node_load($parent_nid_zone);
         $parent_zone_title = $parent_zone->title;
         $node->field_survey_parent_zone[0]['value'] = $parent_zone_title;
+        
+        $node->field_survey_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(POLYGON(" 
+                                                      . $node->field_survey_min_lon[0]['value']
+                                                      . " " 
+                                                      . $node->field_survey_max_lat[0]['value'] 
+                                                      . ", "
+                                                      . $node->field_survey_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_survey_max_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_survey_max_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_survey_min_lat[0]['value']
+                                                      . ", "
+                                                      . $node->field_survey_min_lon[0]['value']
+                                                      . " "
+                                                      . $node->field_survey_min_lat[0]['value']
+                                                      . "))";
       }
       if($node->type == 'line'){
         $parent_nid_survey = $node->nodehierarchy_menu_links[0]['pnid'];
@@ -35,7 +90,26 @@ function custom_module_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
         $parent_zone = node_load($parent_nid_zone);
         $parent_zone_title = $parent_zone->title;
         $node->field_line_parent_zone[0]['value'] = $parent_zone_title;
-      } 
+        
+        $node->field_line_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(LINESTRING("
+                                                      . $node->field_sol_lon_field[0]['value']
+                                                      . " "
+                                                      . $node->field_sol_lat_field[0]['value']
+                                                      . ", "
+                                                      . $node->field_eol_lon_field[0]['value']
+                                                      . " "
+                                                      . $node->field_eol_lat_field[0]['value']
+                                                      . "))";
+        $node->field_line_points_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(POINT("
+                                                      . $node->field_sol_lon_field[0]['value']
+                                                      . " "
+                                                      . $node->field_sol_lat_field[0]['value']
+                                                      . "),POINT("
+                                                      . $node->field_eol_lon_field[0]['value']
+                                                      . " "
+                                                      . $node->field_eol_lat_field[0]['value']
+                                                      . "))";
+      }
     break;
   }
 }

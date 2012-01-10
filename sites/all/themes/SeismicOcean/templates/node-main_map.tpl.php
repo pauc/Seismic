@@ -72,7 +72,7 @@
  */
 ?>
 <?php
-drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu.js', 'theme');
+//drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu.js', 'theme');
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
@@ -102,7 +102,7 @@ drupal_add_js(drupal_get_path('theme', 'SeismicOcean') .'/js/col-expand-map-menu
 
   <div class="content">
     <?php print $content; ?>
-    <?php if(!$teaser) print views_embed_view('test', 'page_1'); ?>
+    <?php if(!$teaser) print views_embed_view('zones', 'page_1'); ?>
   </div>
 
   <?php print $links; ?>

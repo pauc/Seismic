@@ -1,3 +1,4 @@
+/*
 $(function(){
     $('#block-menu_block-1 ul li').each(function(){
         if (!$(this).hasClass('active-trail')){
@@ -16,3 +17,4 @@ $(function(){
         }
     });
 })
+*/

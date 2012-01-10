@@ -3,6 +3,9 @@
  * Block Styling
  */
 
+div.block {
+  position: relative;
+}
 
 .sidebar div.block, .region-under-content div.block /* Block wrapper */ {
   /* margin-bottom: 1em; */

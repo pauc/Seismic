@@ -5,6 +5,11 @@
 	overflow: hidden;
 }
 
+#content-area .front-slideshow .views-row {
+  position: relative;
+  height: 250px;
+}
+
 .front-slideshow-text-wrapper {
 	position: absolute;
 	width: 100%;
