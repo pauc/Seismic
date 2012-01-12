@@ -4,6 +4,67 @@ body {
 }
 
 /*
+ * TIPOGRAFIES
+ */
+@font-face {
+    font-family: 'LetterGothicRegular';
+    src: url('../typos/letr45w-webfont.eot');
+    src: url('../typos/letr45w-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typos/letr45w-webfont.woff') format('woff'),
+         url('../typos/letr45w-webfont.ttf') format('truetype'),
+         url('../typos/letr45w-webfont.svg#LetterGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../typos/HelveticaNeue-LightCond.otf');
+}
+
+@font-face {
+  font-family: Walkway;
+  src: url('../typos/WalkwayCondensedBold.ttf')
+}
+
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../typos/DroidSans-webfont.eot');
+    src: url('../typos/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typos/DroidSans-webfont.woff') format('woff'),
+         url('../typos/DroidSans-webfont.ttf') format('truetype'),
+         url('../typos/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../typos/DroidSans-Bold-webfont.eot');
+    src: url('../typos/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typos/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../typos/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../typos/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div#site-name,
+#block-nice_menus-2,
+h1,
+h2,
+#footer-menu li:first-child a {
+  font-family: 'LetterGothicRegular', 'Terminal Dosis', Walkway, 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+  font-family: 'DroidSansRegular', "Helvetica Neue", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+/*
  * TRACTAMENT DELS ENLLAÇOS
  */
 a, a:link, a:visited, a:active {
@@ -60,31 +121,6 @@ a.read_m-border_rd {
   padding: 4px 12px;
   color: #fff;
   text-decoration: none;
-}
-
-/*
- * TIPOGRAFIES
- */
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../typos/HelveticaNeue-LightCond.otf');
-}
-
-@font-face {
-  font-family: Walkway;
-  src: url('../typos/WalkwayCondensedBold.ttf')
-}
-
-div#site-name,
-#block-nice_menus-2,
-h1,
-h2,
-#footer-menu li:first-child a {
-  font-family: 'Letter Gothic', 'Terminal Dosis', Walkway, 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
-}
-
-body, caption, th, td, input, textarea, select, option, legend, fieldset {
-  font-family: "Helvetica Neue",Verdana,Tahoma,"DejaVu Sans",sans-serif;
 }
 
 /*
@@ -697,6 +733,37 @@ body.node-tipe-front-page #content {
 
 #map-menu a {
   text-decoration: none;
+}
+
+/* SOBREESCRIVINT ESTILS EN LÍNIA D'OPENLAYERS */
+.olControlPanZoomBar {
+  width: 54px;
+  height: 58px;
+  background: url(../ol-images/nav-bg.png) no-repeat 0 4px;;
+}
+
+.olControlPanZoomBar>div:first-child {
+  left: 18px !important;
+}
+
+.olControlPanZoomBar>div + div {
+  left: 0 !important;
+}
+
+.olControlPanZoomBar>div + div + div {
+  left: 36px !important;  
+}
+
+.olControlPanZoomBar>div + div + div + div {
+  left: 18px !important;
+}
+
+.olControlPanZoomBar>div + div + div + div + div + div + div {
+  left: 17px !important;
+}
+
+.olControlPanZoomBar>div + div + div + div + div + div + div + div {
+  left: 18px !important;
 }
 
 /*
