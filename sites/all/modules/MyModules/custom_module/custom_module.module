@@ -47,33 +47,10 @@ function custom_module_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
                                                       . "))";
       }
       if($node->type == 'survey'){
-        $parent_nid_subzone = $node->nodehierarchy_menu_links[0]['pnid'];
-        $parent_subzone = node_load($parent_nid_subzone);
-        $parent_subzone_title = $parent_subzone->title;
-        $node->field_survey_parent_subzone[0]['value'] = $parent_subzone_title;
-        
-        $parent_nid_zone = $parent_subzone->nodehierarchy_menu_links[0]['pnid'];
+        $parent_nid_zone = $node->nodehierarchy_menu_links[0]['pnid'];
         $parent_zone = node_load($parent_nid_zone);
         $parent_zone_title = $parent_zone->title;
         $node->field_survey_parent_zone[0]['value'] = $parent_zone_title;
-        
-        $node->field_survey_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(POLYGON(" 
-                                                      . $node->field_survey_min_lon[0]['value']
-                                                      . " " 
-                                                      . $node->field_survey_max_lat[0]['value'] 
-                                                      . ", "
-                                                      . $node->field_survey_max_lon[0]['value']
-                                                      . " "
-                                                      . $node->field_survey_max_lat[0]['value']
-                                                      . ", "
-                                                      . $node->field_survey_max_lon[0]['value']
-                                                      . " "
-                                                      . $node->field_survey_min_lat[0]['value']
-                                                      . ", "
-                                                      . $node->field_survey_min_lon[0]['value']
-                                                      . " "
-                                                      . $node->field_survey_min_lat[0]['value']
-                                                      . "))";
       }
       if($node->type == 'line'){
         $parent_nid_survey = $node->nodehierarchy_menu_links[0]['pnid'];
@@ -81,14 +58,7 @@ function custom_module_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
         $parent_survey_title = $parent_survey->title;
         $node->field_line_parent_survey[0]['value'] = $parent_survey_title;
         
-        $parent_nid_subzone = $parent_survey->nodehierarchy_menu_links[0]['pnid'];
-        $parent_subzone = node_load($parent_nid_subzone);
-        $parent_subzone_title = $parent_subzone->title;
-        $node->field_line_parent_subzone[0]['value'] = $parent_subzone_title;
-        
-        $parent_nid_zone = $parent_subzone->nodehierarchy_menu_links[0]['pnid'];
-        $parent_zone = node_load($parent_nid_zone);
-        $parent_zone_title = $parent_zone->title;
+        $parent_zone_title = $parent_survey->field_survey_parent_zone[0]["value"];
         $node->field_line_parent_zone[0]['value'] = $parent_zone_title;
         
         $node->field_line_wkt[0]['openlayers_wkt'] = "GEOMETRYCOLLECTION(LINESTRING("

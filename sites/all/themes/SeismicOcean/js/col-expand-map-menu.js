@@ -10,6 +10,14 @@ function collapse(item) {
   }
 }
 
+/*
+ * Funció temporal per provar disparador des de popup d'openlayers, esborrar
+ */
+function mostra(num) {
+  alert("Diu que " + num);
+  return false;
+}
+
 $(function(){
   $('#map-menu .content ul:first>li').each(function(){
     collapse($(this));

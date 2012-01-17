@@ -7,34 +7,12 @@ body {
  * TIPOGRAFIES
  */
 @font-face {
-    font-family: 'LetterGothicRegular';
-    src: url('../typos/letr45w-webfont.eot');
-    src: url('../typos/letr45w-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../typos/letr45w-webfont.woff') format('woff'),
-         url('../typos/letr45w-webfont.ttf') format('truetype'),
-         url('../typos/letr45w-webfont.svg#LetterGothicRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../typos/HelveticaNeue-LightCond.otf');
-}
-
-@font-face {
-  font-family: Walkway;
-  src: url('../typos/WalkwayCondensedBold.ttf')
-}
-
-@font-face {
     font-family: 'DroidSansRegular';
-    src: url('../typos/DroidSans-webfont.eot');
-    src: url('../typos/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../typos/DroidSans-webfont.woff') format('woff'),
-         url('../typos/DroidSans-webfont.ttf') format('truetype'),
-         url('../typos/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    src: url('typos/DroidSans-webfont.eot');
+    src: url('typos/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('typos/DroidSans-webfont.woff') format('woff'),
+         url('typos/DroidSans-webfont.ttf') format('truetype'),
+         url('typos/DroidSans-webfont.svg#DroidSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -42,14 +20,13 @@ body {
 
 @font-face {
     font-family: 'DroidSansBold';
-    src: url('../typos/DroidSans-Bold-webfont.eot');
-    src: url('../typos/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../typos/DroidSans-Bold-webfont.woff') format('woff'),
-         url('../typos/DroidSans-Bold-webfont.ttf') format('truetype'),
-         url('../typos/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    src: url('typos/DroidSans-Bold-webfont.eot');
+    src: url('typos/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('typos/DroidSans-Bold-webfont.woff') format('woff'),
+         url('typos/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('typos/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 div#site-name,
@@ -57,7 +34,7 @@ div#site-name,
 h1,
 h2,
 #footer-menu li:first-child a {
-  font-family: 'LetterGothicRegular', 'Terminal Dosis', Walkway, 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
+  font-family: 'LetterGotL-Reg', 'Terminal Dosis', Walkway, 'DejaVu Sans Condensed', 'DejaVu Sans', sans-serif;
 }
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset {
@@ -148,6 +125,66 @@ h3 a:active {
     font-weight: normal;
     color: #2bd0f4;
     text-decoration: none;
+}
+
+/*
+ * TÍTOLS DELS BLOCKS DE POSEIDON
+ */
+#block-views-poseidon-block_1 h2,
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2,
+.project-preview-header h2
+{
+  font-size: 28px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  font-weight: normal;
+  color: #fff;
+}
+
+#block-views-poseidon-block_1 h2 {
+  height: 72px;
+  padding: 18px 50px 0 68px;  
+  background: url(../images/block-poseidon-h2-bg.png) right top no-repeat;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2,
+.project-preview-header {
+  margin: 0;
+  padding: 18px 20px 16px 68px;
+}
+
+#block-views-poseidon-block_1 h2:first-line,
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2:first-line,
+.project-preview-header h2:first-line {
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
+#block-views-poseidon-block_1 img.imagefield-field_project_logo,
+.project-preview-header img,
+#content-area .node-type-project #project_extra_fields .extra-fields-header img
+{
+  position: absolute;
+  top: 16px;
+  left: 12px;
+}
+
+.project-preview-header {
+  position: relative;
+  background: #606060; /* Old browsers */
+  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-radius: 15px 0 0 0;
+}
+
+.project-preview-header h2 {
+  width: 185px;
+  margin: 0;
 }
 
 /*
@@ -251,6 +288,7 @@ h3 a:active {
  */
 #search {
     width: 258px;
+    height: 1.89em;
     background-color: #fff;
 }
 
@@ -331,39 +369,6 @@ body.node-tipe-front-page #content {
 
 .project-preview .col-3 {
   margin-left: 25px;
-}
-
-.project-preview-header {
-  position: relative;
-  padding: 18px 20px 18px 68px;
-  background: #606060; /* Old browsers */
-  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
-  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-  border-radius: 15px 0 0 0;
-}
-
-.project-preview-header img {
-  position: absolute;
-  top: 18px;
-  left: 12px;
-}
-
-.project-preview-header h2 {
-  width: 185px;
-  margin: 0;
-  color: #fff;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 1em;  
-}
-
-.project-preview-header h2:first-line {
-  font-weight: bold;
 }
 
 .project-preview .col-1 .imagecache {
@@ -510,7 +515,7 @@ body.node-tipe-front-page #content {
 }
 
 #content-area .project-preview.other-projects .views-row {
-  width: 300px;
+  width: 288px;
   float: left;
   margin: 12px 0 12px;
   padding-right: 15px;
@@ -540,25 +545,6 @@ body.node-tipe-front-page #content {
 #content-area .node-type-project #project_extra_fields .extra-fields-header {
   position: relative;
   background: #000 url(../images/white-square.png) no-repeat 215px top;
-}
-
-#content-area .node-type-project #project_extra_fields .extra-fields-header img {
-  position: absolute;
-  top: 18px;
-  left: 12px;
-}
-
-#content-area .node-type-project #project_extra_fields .extra-fields-header h2 {
-  margin: 0;
-  padding: 18px 20px 18px 68px;
-  color: #fff;
-  font-size: 28px;
-  line-height: 1em;
-  font-weight: normal;
-}
-
-#content-area .node-type-project #project_extra_fields .extra-fields-header h2:first-line {
-  font-weight: bold;
 }
 
 #content-area .node-type-project #project_extra_fields .extra-fields-content {
@@ -733,6 +719,15 @@ body.node-tipe-front-page #content {
 
 #map-menu a {
   text-decoration: none;
+}
+
+#popup_close {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+#map .olPopupCloseBox {
+  background-image: url(../ol-images/close.png);
 }
 
 /* SOBREESCRIVINT ESTILS EN LÍNIA D'OPENLAYERS */

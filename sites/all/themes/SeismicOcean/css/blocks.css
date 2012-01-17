@@ -57,27 +57,8 @@ div.block {
   background: transparent;
 }
 
-#block-views-poseidon-block_1 h2 {
-  height: 72px;
-  padding: 18px 100px 0 68px;
-  font-size: 1.95em;
-  line-height: 1em;
-  background: url(../images/block-poseidon-h2-bg.png) right top no-repeat;
-}
-
-#block-views-poseidon-block_1 h2:first-line {
-  font-weight: bold;
-  line-height: 1em;
-}
-
 #block-views-poseidon-block_1 .content {
   min-height: 28em;
-}
-
-#block-views-poseidon-block_1 img.imagefield-field_project_logo {
-  position: absolute;
-  top: 18px;
-  left: 12px;
 }
 
 #block-views-poseidon-block_1 .views-field-field-project-summary-value {

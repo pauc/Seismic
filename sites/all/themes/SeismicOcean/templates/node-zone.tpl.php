@@ -101,11 +101,11 @@
     <?php print $content; ?>
     <?php if(!$teaser): ?>
       <div id="map">
-        <?php print views_embed_view('areas', 'page_1', $nid); ?>
+        <?php print views_embed_view('lines', 'page_2', $nid); ?>
       </div>
       <div id="map-menu">
       <?php
-          $block = (object) module_invoke('menu_block', 'block', 'view', 1);
+          $block = (object)module_invoke('menu_block', 'block', 'view', 1);
           print theme('block', $block);
       ?>
       </div>
