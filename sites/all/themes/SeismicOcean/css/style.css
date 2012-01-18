@@ -57,10 +57,13 @@ a:hover {
   -o-transition: color 0.5s; /* Opera */
 }
 
-.node_read_more a {
+.node_read_more a,
+.node-type-main-map .openlayers-popup-name a,
+.node-type-zone .openlayers-popup-name a,
+.node-type-survey .openlayers-popup-name a {
   padding-left: 13px;
   text-decoration: none;
-  background: url("../images/read_more-bg.png") no-repeat left 2px;
+  background: url("../images/read_more-bg.png") no-repeat left top;
 }
 
 /* READ MORE AMB CANTOS RODONNS */
@@ -79,7 +82,9 @@ a:hover {
   color: #fff;  
 }
 .views-field-view-node a:before,
-.view-footer a:before {
+.view-footer a:before, 
+.read_m-border_rd:before
+{
   content: "›";
   margin-right: 6px;
 }
@@ -538,6 +543,7 @@ body.node-tipe-front-page #content {
 
 #content-area .node-type-project #project_extra_fields {
   width: 278px;
+  position: absolute;
   float: left;
   background-color: #dbeff4;
 }
@@ -614,7 +620,7 @@ body.node-tipe-front-page #content {
 }
 
 #content-area .node-type-project .field-field-project-body-participants ul {
-  width: 180px;
+  width: 200px;
   min-height: 12.5em;
   margin: 0 0 1em;
   padding: 5px 0;
@@ -661,7 +667,8 @@ body.node-tipe-front-page #content {
 #map {
   width: 695px;
   float: left;
-  margin-right: 20px
+  margin-right: 20px;
+  margin-bottom: 68px;
 }
 
 #map-menu {
@@ -730,6 +737,10 @@ body.node-tipe-front-page #content {
   background-image: url(../ol-images/close.png);
 }
 
+.openlayers-popup-description {
+  margin-top: 10px;
+}
+
 /* SOBREESCRIVINT ESTILS EN LÍNIA D'OPENLAYERS */
 .olControlPanZoomBar {
   width: 54px;
@@ -759,6 +770,68 @@ body.node-tipe-front-page #content {
 
 .olControlPanZoomBar>div + div + div + div + div + div + div + div {
   left: 18px !important;
+}
+
+/* ESTILS PER AL MAPA GENERAL */
+.node-type-main-map #content-area .openlayers-popup-description .view-content, 
+.node-type-main-map #content-area .openlayers-popup-description .views-row
+{
+  margin: 0.3em 0;
+  border: 0;
+  padding: 0;
+}
+
+.node-type-main-map .openlayers-popup-description .view-children ul {
+  margin: 0.3em 0;
+  padding: 0 0 0 1.5em;
+  list-style-type: disc;
+}
+
+.node-type-main-map .openlayers-popup-description .view-children ul a {
+  text-decoration: none;
+}
+
+/* ESTILS PER ALS MAPES DE ZONES I SURVEYS */
+.node-type-zone .openlayers-popup-description .col,
+.node-type-survey .openlayers-popup-description .col
+{
+  border-top: 1px solid #d1d3d4;
+  float: left;
+  margin-bottom: 18px;
+}
+
+.node-type-zone .openlayers-popup-description .col-1,
+.node-type-survey .openlayers-popup-description .col-1
+{
+  margin-right: 20px;
+}
+
+.node-type-zone .openlayers-popup-description .col div.field,
+.node-type-survey .openlayers-popup-description .col div.field
+{
+  padding: 10px 0 6px;
+  border-bottom: 1px solid #d1d3d4;
+}
+
+.node-type-zone .openlayers-popup-description .col div.field span.field-label,
+.node-type-survey .openlayers-popup-description .col div.field span.field-label
+{
+  text-transform: uppercase;
+  color: #2bd0f4;
+  font-weight: normal;
+}
+
+.node-type-zone .openlayers-popup-description div.links-to-profiles,
+.node-type-survey .openlayers-popup-description div.links-to-profiles
+{
+  clear: both;
+}
+
+.node-type-zone .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
+.node-type-survey .openlayers-popup-description div.links-to-profiles a.read_m-border_rd
+{
+  position: static;
+  margin-right: 10px;
 }
 
 /*
@@ -888,6 +961,10 @@ div.pager .pager li.pager-previous a {
 
 .node-form fieldset {
   background-color: #eee;
+}
+
+.node-form fieldset.group-oceanographic-profile {
+  background-color: transparent;
 }
 
 .node-form .fieldset-wrapper>.form-item {

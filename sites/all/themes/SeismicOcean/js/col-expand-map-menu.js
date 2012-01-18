@@ -3,19 +3,11 @@ function collapse(item) {
     item.find('ul:first').hide().addClass('theme-collapsed');
     item.addClass('theme-collapsed');
   }
-  if (!item.hasClass('active') && !item.hasClass('leaf')) {
+  if (!item.hasClass('leaf')) {
     item.find('ul:first>li').each(function(index) {
       collapse($(this));      
     });    
   }
-}
-
-/*
- * Funció temporal per provar disparador des de popup d'openlayers, esborrar
- */
-function mostra(num) {
-  alert("Diu que " + num);
-  return false;
 }
 
 $(function(){

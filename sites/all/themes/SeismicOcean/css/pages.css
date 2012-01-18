@@ -293,7 +293,9 @@ ul.links li {
 .clearfix:after, 
 .region-under-content:after,
 .project-preview .views-row:after,
-.other-projects .view-content:after {
+.other-projects .view-content:after,
+.field-field-project-body-participants:after
+{
   content: ".";
   display: block;
   height: 0;
