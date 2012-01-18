@@ -11,6 +11,7 @@
   margin: 1.1em 0;
   border-bottom: 1px solid #d1d3d4;
   padding-bottom: 1.3em;
+  position: relative;
 }
 
 span.node_read_more {

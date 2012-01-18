@@ -109,6 +109,7 @@
       <div id="map-menu">
       <?php
           $block = (object) module_invoke('menu_block', 'block', 'view', 1);
+          $block->subject = "Map levels";
           print theme('block', $block);
       ?>
       </div>

@@ -15,7 +15,6 @@ body {
          url('typos/DroidSans-webfont.svg#DroidSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -60,7 +59,9 @@ a:hover {
 .node_read_more a,
 .node-type-main-map .openlayers-popup-name a,
 .node-type-zone .openlayers-popup-name a,
-.node-type-survey .openlayers-popup-name a {
+.node-type-survey .openlayers-popup-name a,
+.node-type-main-map .openlayers-popup-description .view-children ul a 
+{
   padding-left: 13px;
   text-decoration: none;
   background: url("../images/read_more-bg.png") no-repeat left top;
@@ -68,7 +69,10 @@ a:hover {
 
 /* READ MORE AMB CANTOS RODONNS */
 
-.views-field-view-node {
+#block-views-poseidon-block_1 .views-field-view-node,
+.view-secondary-projects .views-field-view-node,
+.view-poseidon .views-field-view-node
+{
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -77,11 +81,16 @@ a:hover {
   border-radius: 8px;
 }
 
-.views-field-view-node a {
+#block-views-poseidon-block_1 .views-field-view-node a,
+.view-secondary-projects .views-field-view-node a,
+.view-poseidon .views-field-view-node a
+{
   text-decoration: none;
   color: #fff;  
 }
-.views-field-view-node a:before,
+#block-views-poseidon-block_1 .views-field-view-node a:before,
+.view-secondary-projects .views-field-view-node a:before,
+.view-poseidon .views-field-view-node a:before,
 .view-footer a:before, 
 .read_m-border_rd:before
 {
@@ -206,6 +215,20 @@ h3 a:active {
 .front .node .content {
   padding-bottom: 4px;
   border-bottom: 1px solid #ccc;
+}
+
+.front .node .content p:last-child {
+  margin-bottom: 0;
+}
+
+.front #content-area div.view-content {
+  border: 0;
+}
+
+.front #content-area .views-row {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .front .sidebar div.block.first {
@@ -778,6 +801,11 @@ body.node-tipe-front-page #content {
 }
 
 /* ESTILS PER AL MAPA GENERAL */
+.node-type-main-map #content-area .openlayers-popup-name {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #d1d3d4;
+}
+
 .node-type-main-map #content-area .openlayers-popup-description .view-content, 
 .node-type-main-map #content-area .openlayers-popup-description .views-row
 {
@@ -788,12 +816,8 @@ body.node-tipe-front-page #content {
 
 .node-type-main-map .openlayers-popup-description .view-children ul {
   margin: 0.3em 0;
-  padding: 0 0 0 1.5em;
-  list-style-type: disc;
-}
-
-.node-type-main-map .openlayers-popup-description .view-children ul a {
-  text-decoration: none;
+  padding: 0 0 0 0.8em;
+  list-style-type: none;
 }
 
 /* ESTILS PER ALS MAPES DE ZONES I SURVEYS */
