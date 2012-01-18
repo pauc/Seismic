@@ -715,13 +715,18 @@ body.node-tipe-front-page #content {
 }
 
 #map-menu li div.exp-col {
-  width: 0.8em;
-  height: 0.8em;
+  width: 11px;
+  height: 11px;
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 10px;
   border: 1px solid #000;
   cursor: pointer;
+  background: url(../images/collapse.png) 50% 50% no-repeat;
+}
+
+#map-menu li.theme-collapsed div.exp-col {
+  background: url(../images/expand.png) 50% 50% no-repeat;
 }
 
 #map-menu a {

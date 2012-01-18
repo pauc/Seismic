@@ -18,8 +18,9 @@ $(function(){
   $('div.exp-col').click(function(){
     var element = $(this);
     if ($(this).siblings('ul:first').hasClass('theme-collapsed')){
-      $(this).siblings('ul:first').removeClass('theme-collapsed').slideDown(500);
-      $(this).parent('li').removeClass('theme-collapsed');
+      $(this).siblings('ul:first').removeClass('theme-collapsed').slideDown(500, function(){
+        element.parent('li').removeClass('theme-collapsed');        
+      });
     } else {
       $(this).siblings('ul:first').addClass('theme-collapsed').slideUp(500, function(){
         element.parent('li').addClass('theme-collapsed');          
