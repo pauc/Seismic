@@ -27,5 +27,29 @@ $(function(){
       });
     }       
   });
+  
+  if ($(location).attr('href').indexOf('#seismic-profile') != -1) {
+    $(window)._scrollable();
+    $(window).scrollTop(0);
+    
+    $(window).load(function(){
+      $(window).scrollTo('#seismic-profile', 600);
+    });
+  }
+  
+  if ($(location).attr('href').indexOf('#oceanographic-profile') != -1) {
+    $(window)._scrollable();
+    $(window).scrollTop(0);
+    
+    $(window).load(function(){
+      $(window).scrollTo('#oceanographic-profile', 600);
+    });
+  }
+  
+  $('#line-profiles a.up').click(function(e){
+    e.preventDefault();
+    $(window).scrollTo('#content', 600);
+  })
+  
 });
 

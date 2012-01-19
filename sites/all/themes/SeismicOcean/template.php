@@ -358,7 +358,8 @@ function SeismicOcean_preprocess_node(&$vars, $hook) {
   $type = $node->type;
   
   if ($type == 'main_map' || $type == 'zone' || $type == 'area' || $type == 'survey' || $type == 'line') {
-    drupal_add_js(path_to_theme() . "/js/col-expand-map-menu.js", "theme");    
+    drupal_add_js(path_to_theme() . "/js/jquery.scrollTo-1.4.2-min.js", "theme");  
+    drupal_add_js(path_to_theme() . "/js/map-pages-functions.js", "theme");    
   }
 
   // Optionally, run node-type-specific preprocess functions, like

@@ -103,7 +103,7 @@
       <div id="map">
         <?php print views_embed_view('lines', 'page_2', $nid); ?>
         <div id="advert">
-          (*) Contains pceanographic profile
+          (*) Contains oceanographic profile
         </div>
       </div>
       <div id="map-menu">
