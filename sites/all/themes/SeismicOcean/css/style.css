@@ -60,6 +60,7 @@ a:hover {
 .node-type-main-map .openlayers-popup-name a,
 .node-type-zone .openlayers-popup-name a,
 .node-type-survey .openlayers-popup-name a,
+.node-type-line .openlayers-popup-name a,
 .node-type-main-map .openlayers-popup-description .view-children ul a 
 {
   padding-left: 13px;
@@ -696,9 +697,14 @@ body.node-tipe-front-page #content {
 
 #map-menu {
   width: 220px;
-  float: left;
+  float: right;
   background-color: #ebf6f9;
   text-transform: uppercase;
+}
+
+#advert {
+  float: right;
+  margin-top: 4px;
 }
 
 #map-menu .content {
@@ -820,9 +826,10 @@ body.node-tipe-front-page #content {
   list-style-type: none;
 }
 
-/* ESTILS PER ALS MAPES DE ZONES I SURVEYS */
+/* ESTILS PER ALS MAPES DE ZONES, SURVEYS I LINES */
 .node-type-zone .openlayers-popup-description .col,
-.node-type-survey .openlayers-popup-description .col
+.node-type-survey .openlayers-popup-description .col,
+.node-type-line .openlayers-popup-description .col
 {
   border-top: 1px solid #d1d3d4;
   float: left;
@@ -830,20 +837,23 @@ body.node-tipe-front-page #content {
 }
 
 .node-type-zone .openlayers-popup-description .col-1,
-.node-type-survey .openlayers-popup-description .col-1
+.node-type-survey .openlayers-popup-description .col-1,
+.node-type-line .openlayers-popup-description .col-1
 {
   margin-right: 20px;
 }
 
 .node-type-zone .openlayers-popup-description .col div.field,
-.node-type-survey .openlayers-popup-description .col div.field
+.node-type-survey .openlayers-popup-description .col div.field,
+.node-type-line .openlayers-popup-description .col div.field
 {
   padding: 10px 0 6px;
   border-bottom: 1px solid #d1d3d4;
 }
 
 .node-type-zone .openlayers-popup-description .col div.field span.field-label,
-.node-type-survey .openlayers-popup-description .col div.field span.field-label
+.node-type-survey .openlayers-popup-description .col div.field span.field-label,
+.node-type-line .openlayers-popup-description .col div.field span.field-label
 {
   text-transform: uppercase;
   color: #2bd0f4;
@@ -851,16 +861,111 @@ body.node-tipe-front-page #content {
 }
 
 .node-type-zone .openlayers-popup-description div.links-to-profiles,
-.node-type-survey .openlayers-popup-description div.links-to-profiles
+.node-type-survey .openlayers-popup-description div.links-to-profiles,
+.node-type-line .openlayers-popup-description div.links-to-profiles
 {
   clear: both;
 }
 
 .node-type-zone .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
-.node-type-survey .openlayers-popup-description div.links-to-profiles a.read_m-border_rd
+.node-type-survey .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
+.node-type-line .openlayers-popup-description div.links-to-profiles a.read_m-border_rd
 {
   position: static;
   margin-right: 10px;
+}
+
+/* ESTILS PER A LES DADES DELS PERFILS SÍSMIC I OCEANOGRÀFIC */
+.node-type-line #map {
+  margin-bottom: 10px;
+}
+
+#line-profiles {
+  width: 695px;
+  float: left;
+  clear: left;
+  margin-bottom: 25px;
+}
+
+#line-profiles #oceanographic-profile {
+  margin-top: 28px;
+}
+
+#line-profiles .profile-header {
+  padding: 6px 0 2px 10px;
+  background: #606060; /* Old browsers */
+  background: -moz-linear-gradient(top,  #606060 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #606060 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #606060 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #606060 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #606060 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bolder;
+}
+
+#line-profiles .profile-header span {
+  padding-left: 18px;
+  background: url(../images/read_more-bg.png) no-repeat left top;
+}
+
+#line-profiles .profile-img {
+  margin-top: 10px;
+}
+
+#line-profiles .profile-img img {
+  border: 1px solid #dcddde;
+}
+
+#line-profiles .profile-data {
+  margin-top: 10px;
+  padding: 20px 10px 5px;
+  background: #ebf6f9;
+}
+
+#line-profiles .profile-data .col {
+  width: 322px;
+  float: left;
+}
+
+#line-profiles .profile-data .col-1{
+  margin-right: 30px;  
+}
+
+#line-profiles .profile-data .field {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #d1d3d4;
+}
+
+#line-profiles .profile-data .field-label {
+  float: left;
+  color: #2bd0f4;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#line-profiles .profile-data .col-1 .field-label {
+  width: 125px;  
+}
+
+#line-profiles .profile-data .col-2 .field-label {
+  width: 175px;  
+}
+
+#line-profiles #oceanographic-profile .profile-data .col-1 .field-label {
+  width: 175px;
+}
+
+#line-profiles a.up {
+  float: right;
+  margin-top: 6px;
+  padding-right: 25px;
+  text-decoration: none;
+  background: url(../images/scroll_up.png) no-repeat right top; 
 }
 
 /*

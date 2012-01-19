@@ -101,17 +101,194 @@
   <?php endif; ?>
 
   <div class="content">
-    <?php print $content; ?>
+    <?php //print $content; ?>
     <?php if(!$teaser): ?>
       <div id="map">
-        <?php print views_embed_view('lines', 'page_1', $nid); ?>
+        <?php print views_embed_view('lines', 'page_3', $nid); ?>
+        <div id="advert">
+          (*) Contains pceanographic profile
+        </div>
       </div>
       <div id="map-menu">
       <?php
           $block = (object) module_invoke('menu_block', 'block', 'view', 1);
           $block->subject = "Map levels";
           print theme('block', $block);
-      ?>
+      ?>      
+      </div>
+      <div id="line-profiles">
+        <div id="seismic-profile" class="clearfix">
+          <div class="profile-header">
+            <?php print $node->content['field_line_parent_survey']['field']['#title']; ?>
+            <?php print $field_line_parent_survey[0]['value']; ?>
+            <span>
+              <?php print $type . " " . $title; ?>
+            </span>
+            <span>
+              Seismic profile:
+            </span>
+          </div>
+          <div class="profile-img">
+            <?php print $field_image[0]['view']; ?>
+          </div>
+          <div class="profile-data clearfix">
+            <div class="col-1 col">
+              <div class="field clearfix">
+                <span class="field-label">
+                  Start of line:
+                </span>
+                <span class="field-data">
+                  <?php print $field_sol_lon_field[0]['value'] . " " . $field_sol_lat_field[0]['value']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  End of line:
+                </span>
+                <span class="field-data">
+                  <?php print $field_eol_lon_field[0]['value'] . " " . $field_eol_lat_field[0]['value']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_dates']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_dates[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_parent_zone']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_parent_zone[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_parent_survey']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_parent_survey[0]['view']; ?>
+                </span>
+              </div>
+            </div>
+            <div class="col-2 col">
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_acquisition_system']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_acquisition_system[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_streamer_lenght']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_streamer_lenght[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_type_of_processing']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_type_of_processing[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_used_source']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_used_source[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_number_of_chanels']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_number_of_chanels[0]['view']; ?>
+                </span>
+              </div>
+              <div class="field clearfix">
+                <span class="field-label">
+                  <?php print $node->content['field_line_shot_interval']['field']['#title']; ?>:
+                </span>
+                <span class="field-data">
+                  <?php print $field_line_shot_interval[0]['view']; ?>
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="#content" class="up">Back to map</a>
+        </div>
+        <?php if (isset($node->field_line_ocean_prof_image[0]["filename"])): ?>
+          <div id="oceanographic-profile" class="clearfix">
+            <div class="profile-header">
+              <?php print $node->content['field_line_parent_survey']['field']['#title']; ?>
+              <?php print $field_line_parent_survey[0][value]; ?>
+              <span>
+                <?php print $type . " " . $title; ?>
+              </span>
+              <span>
+                Oceanogaphic profile:
+              </span>
+            </div>
+            <div class="profile-img">
+              <?php print $field_line_ocean_prof_image[0]['view']; ?>
+            </div>
+            <div class="profile-data clearfix">
+              <div class="col-1 col">
+                <div class="field clearfix">
+                  <span class="field-label">
+                    Start of line:
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_line_start_ocean_lon[0]['value'] . " " . $field_line_start_ocean_lat[0]['value']; ?>
+                  </span>
+                </div>
+                <div class="field clearfix">
+                  <span class="field-label">
+                    End of line:
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_line_end_ocean_lon[0]['value'] . " " . $field_line_end_ocean_lat[0]['value']; ?>
+                  </span>
+                </div>
+                <div class="field clearfix">
+                  <span class="field-label">
+                    Profiler
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_line_profiler[0]['view']; ?>
+                  </span>
+                </div>
+                <div class="field clearfix">
+                  <span class="field-label">
+                    Number of profilers:
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_number_of_profilers[0]['view']; ?>
+                  </span>
+                </div>
+                <div class="field clearfix">
+                  <span class="field-label">
+                    Profiler Interval:
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_line_profiler_interval[0]['view']; ?>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <a href="#content" class="up">Back to map</a>
+          </div>
+        <?php endif; ?>
       </div>
     <?php endif; ?>
   </div>
