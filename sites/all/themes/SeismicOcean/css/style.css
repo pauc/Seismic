@@ -57,6 +57,7 @@ a:hover {
 }
 
 .node_read_more a,
+.front .openlayers-popup-name a,
 .node-type-main-map .openlayers-popup-name a,
 .node-type-zone .openlayers-popup-name a,
 .node-type-survey .openlayers-popup-name a,
@@ -556,6 +557,10 @@ body.node-tipe-front-page #content {
 /*
  * ESTILS PER AL CONTINGUT DELS PROJECTES
  */
+.node-type-secondary-project #content {
+  min-height: 50em;
+}
+
 #content-area .node-type-project .content {
   margin-left: 298px;
   margin-right: 10px;
@@ -765,9 +770,6 @@ body.node-tipe-front-page #content {
 #popup_close {
   width: 8px !important;
   height: 8px !important;
-}
-
-#map .olPopupCloseBox {
   background-image: url(../ol-images/close.png);
 }
 
@@ -827,6 +829,7 @@ body.node-tipe-front-page #content {
 }
 
 /* ESTILS PER ALS MAPES DE ZONES, SURVEYS I LINES */
+.front .openlayers-popup-description .col,
 .node-type-zone .openlayers-popup-description .col,
 .node-type-survey .openlayers-popup-description .col,
 .node-type-line .openlayers-popup-description .col
@@ -836,6 +839,7 @@ body.node-tipe-front-page #content {
   margin-bottom: 18px;
 }
 
+.front .openlayers-popup-description .col-1,
 .node-type-zone .openlayers-popup-description .col-1,
 .node-type-survey .openlayers-popup-description .col-1,
 .node-type-line .openlayers-popup-description .col-1
@@ -843,6 +847,7 @@ body.node-tipe-front-page #content {
   margin-right: 20px;
 }
 
+.front .node-type-zone .openlayers-popup-description .col div.field,
 .node-type-zone .openlayers-popup-description .col div.field,
 .node-type-survey .openlayers-popup-description .col div.field,
 .node-type-line .openlayers-popup-description .col div.field
@@ -851,6 +856,7 @@ body.node-tipe-front-page #content {
   border-bottom: 1px solid #d1d3d4;
 }
 
+.front .openlayers-popup-description .col div.field span.field-label,
 .node-type-zone .openlayers-popup-description .col div.field span.field-label,
 .node-type-survey .openlayers-popup-description .col div.field span.field-label,
 .node-type-line .openlayers-popup-description .col div.field span.field-label
@@ -860,6 +866,7 @@ body.node-tipe-front-page #content {
   font-weight: normal;
 }
 
+.front .openlayers-popup-description div.links-to-profiles,
 .node-type-zone .openlayers-popup-description div.links-to-profiles,
 .node-type-survey .openlayers-popup-description div.links-to-profiles,
 .node-type-line .openlayers-popup-description div.links-to-profiles
@@ -867,6 +874,7 @@ body.node-tipe-front-page #content {
   clear: both;
 }
 
+.front .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
 .node-type-zone .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
 .node-type-survey .openlayers-popup-description div.links-to-profiles a.read_m-border_rd,
 .node-type-line .openlayers-popup-description div.links-to-profiles a.read_m-border_rd

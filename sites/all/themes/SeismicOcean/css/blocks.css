@@ -10,7 +10,7 @@ div.block {
 .sidebar div.block, .region-under-content div.block /* Block wrapper */ {
   /* margin-bottom: 1em; */
   width: 315px;
-  height: 30.85em;
+  min-height: 32em;
   float: left;
   overflow: hidden;
 }
@@ -82,7 +82,7 @@ div.block {
 .view-id-projects.view-display-id-block_1 .views-field-nothing {
   margin-top: 3px;
   margin-bottom: 5px;
-  padding: 10px 7px 4px;
+  padding: 4px 7px 0px;
   background-color: #ebf6f9;
 }
 
@@ -92,6 +92,32 @@ div.block {
 
 .view-id-projects.view-display-id-block_1 .views-field-nothing p {
   margin-bottom: 0.5em;
+}
+
+/*
+ * ESTILS PER AL BLOCK DE NEWS
+ */
+.block .view-news .views-row {
+  margin-bottom: 0.8em;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid #dcddde;
+}
+
+.block .view-news .views-field-title {
+  color: #2bd0f4;
+  text-transform: uppercase;
+}
+
+.block .view-news .views-field-created {
+  margin: 2px 0;
+}
+
+.block .view-news p {
+  margin: 0.25em 0;
+}
+
+.block .view-news .view-footer {
+  border: none;
 }
 
 /*
