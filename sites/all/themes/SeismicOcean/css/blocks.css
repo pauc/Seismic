@@ -86,12 +86,8 @@ div.block {
   background-color: #ebf6f9;
 }
 
-.view-id-projects.view-display-id-block_1 .views-field-nothing p:first-child {
-  margin-top: 0;
-}
-
 .view-id-projects.view-display-id-block_1 .views-field-nothing p {
-  margin-bottom: 0.5em;
+  margin: 0.4em 0 0.1em;
 }
 
 /*

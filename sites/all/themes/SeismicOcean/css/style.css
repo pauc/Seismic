@@ -394,7 +394,7 @@ body.node-tipe-front-page #content {
 .project-preview .col-3 {
   width: 300px;
   margin-left: 15px;
-  padding: 18px 0;
+  padding: 10px 0;
 }
 
 .project-preview .col-3 {
@@ -402,7 +402,7 @@ body.node-tipe-front-page #content {
 }
 
 .project-preview .col-1 .imagecache {
-  margin-bottom: -3px;
+  margin-bottom: -5px;
 }
 
 .project-preview .field-label,
@@ -453,58 +453,8 @@ body.node-tipe-front-page #content {
   left: 0;
 }
 
-.project-preview.secondary-projects .views-field-field-project-title-value,
-.project-preview.secondary-projects .views-field-field-project-pi-value,
-.project-preview.secondary-projects .views-field-field-project-supervisors-value,
-.project-preview.secondary-projects .views-field-title,
-.project-preview.secondary-projects .views-field-field-project-founding-value,
-.project-preview.secondary-projects .views-field-field-project-reference-value,
-.project-preview.secondary-projects .views-field-field-project-dates-value,
-.project-preview.secondary-projects .views-field-field-project-participants-value,
-.project-preview.secondary-projects .views-field-field-project-participants-value,
-.project-preview.secondary-projects .views-field-field-project-url-url,
-.project-preview.other-projects-page .views-field-field-project-title-value,
-.project-preview.other-projects-page .views-field-field-project-pi-value,
-.project-preview.other-projects-page .views-field-field-project-supervisors-value,
-.project-preview.other-projects-page .views-field-title,
-.project-preview.other-projects-page .views-field-field-project-founding-value,
-.project-preview.other-projects-page .views-field-field-project-reference-value,
-.project-preview.other-projects-page .views-field-field-project-dates-value,
-.project-preview.other-projects-page .views-field-field-project-participants-value,
-.project-preview.other-projects-page .views-field-field-project-participants-value,
-.project-preview.other-projects-page .views-field-field-project-url-url  
-{
-  width: 300px;
-  float: left;
-  margin-left: 15px;
-  margin-top: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ccc;
-}
-
-.project-preview.secondary-projects .views-field-field-project-title-value,
-.project-preview.other-projects-page .views-field-field-project-title-value
-{
-  margin-top: 26px;
-}
-
-.project-preview.secondary-projects .views-row>div + div,
-.project-preview.other-projects-page  .views-row>div + div 
-{
-  margin-top: 26px;
-}
-
-.project-preview.secondary-projects .views-row>div + div + div + div,
-.project-preview.other-projects-page .views-row>div + div + div + div {
-  margin-top: 8px;
-}
-
 .views-field-field-project-participants-value .field-item {
   margin: 4px 0;
-}
-
-.project-preview.other-projects-page .views-field-field-project-participants-value {
-  float: right;
 }
 
 .views-field-field-project-participants-value .field-item:before {
@@ -974,6 +924,15 @@ body.node-tipe-front-page #content {
   padding-right: 25px;
   text-decoration: none;
   background: url(../images/scroll_up.png) no-repeat right top; 
+}
+
+/*
+ * ESTILS PER A LA PÀGINA NEWS
+ */
+.view-news.view-display-id-default .views-field-title a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #2BD0F4;
 }
 
 /*

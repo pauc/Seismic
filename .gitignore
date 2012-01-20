@@ -9,3 +9,4 @@ robots.txt
 UPGRADE.txt
 .settings
 .project
+sites/default/settings.php
