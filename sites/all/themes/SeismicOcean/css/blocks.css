@@ -124,7 +124,7 @@ div.block {
  * ESTILS PER AL BLOC DEL MENU DE LA REGIÓ FOOTER
  */
 #block-block-4 {
-  padding: 35px 25px;
+  padding: 35px 0 35px 25px;
 }
 
 #block-block-4 div.transparent {
@@ -157,19 +157,20 @@ div.block {
 #block-block-4 ul li, #block-block-4 ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 #block-block-4 ul li:first-child {
-  padding-right: 18px;
-  padding-left: 0;
-  border-right: 2px solid #000;
+  padding: 0;
 }
 
 #block-block-4 ul li:first-child a {
-  font-size: 1.4em;
+  padding: 4px 15px 1px 0;
+  border-right: 2px solid #000;
+  font-size: 1.8em;
+  letter-spacing: 0em;
   color: #000;
 }
 

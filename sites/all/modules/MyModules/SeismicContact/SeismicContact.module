@@ -1,0 +1,57 @@
+<?php
+
+function SeismicContact_form_contact_mail_page_alter(&$form, $form_state){
+  $form['privPolicy'] = array(
+    '#type' => 'checkbox',
+    '#id' => 'accept-privacy-policy',
+    '#required' => TRUE,
+    '#description' => t('I accept the <a class="to_priv_policy" href="/privacy_policy">privacy policy</a> of Seismic Oceanography.')
+  );
+  
+  $order = array('name', 'mail', 'subject', 'message', 'privPolicy', 'submit');
+  foreach ($order as $key => $field){
+    $form[$field]['#weight'] = $key;
+  }
+}
+/**
+ * Implements hook_elements().
+ */
+function SeismicContact_elements() {
+  return array(
+    'checkbox' => array(
+      '#process' => array('SeismicContact_process_element'),
+    ),
+  );
+}
+
+/**
+ * Form element #process callback for checkbox form elements.
+ */
+function SeismicContact_process_element($element) {
+  if (!empty($element['#required'])) {
+    $element['#element_validate'][] = 'SeismicContact_element_validate';
+    $element['#pre_render'][] = 'SeismicContact_pre_render_checkbox';
+  }
+  return $element;
+}
+
+/**
+ * Form element validation handler for a required checkbox.
+ */
+function SeismicContact_element_validate($element, &$form_state) {
+  if (empty($element['#value'])) {
+    if ($element['#id'] = 'accept-privacy-policy'){
+      form_error($element, t('You have to accept our privacy policy to send a message'));
+    } else {
+      form_error($element, t('!title field is required.', array('!title' => filter_xss_admin($element['#title']))));      
+    }
+  }
+}
+
+/**
+ * Adds required symbol during rendering, so that it is not shown in error messages.
+ */
+function SeismicContact_pre_render_checkbox($element) {
+  $element['#title'] .= ' <span class="form-required" title="' . t('This field is required.') . '">*</span>';
+  return $element;
+}

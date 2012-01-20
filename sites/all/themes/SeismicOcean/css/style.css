@@ -1066,6 +1066,29 @@ div.pager .pager li.pager-previous a {
   margin-left: 15px;
 }
 
+#contact-mail-page .contact-form-content #accept-privacy-policy-wrapper label {
+  width: auto;  
+}
+
+#contact-mail-page .contact-form-content #edit-copy-wrapper label {
+  float: none;
+  font-size: 0.85em;
+}
+
+#contact-mail-page .contact-form-content #edit-copy-wrapper input {
+  position: relative;
+  top: 2px;
+  margin-left: 126px;
+}
+
+#contact-mail-page .contact-form-content #accept-privacy-policy-wrapper input {
+  margin-left: 126px;
+}
+
+#contact-mail-page .contact-form-content #accept-privacy-policy-wrapper .description {
+  padding-top: 2px;
+}
+
 #contact-mail-page .contact-form-content #edit-submit {
   float: right;
   clear: both;

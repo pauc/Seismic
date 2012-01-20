@@ -1,0 +1,5 @@
+; $Id$
+name = "Seismic Contact"
+description = "Adds a checkbox to the site contact form"
+core = 6.x
+package = My Modules

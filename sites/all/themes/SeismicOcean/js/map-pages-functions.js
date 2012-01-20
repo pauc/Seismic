@@ -42,13 +42,13 @@ $(function(){
     $(window).scrollTop(0);
     
     $(window).load(function(){
-      $(window).scrollTo('#oceanographic-profile', 600);
+      $(window).scrollTo('#oceanographic-profile', 800);
     });
   }
   
   $('#line-profiles a.up').click(function(e){
     e.preventDefault();
-    $(window).scrollTo('#content', 600);
+    $(window).scrollTo('#navigation', 600, {offset: {top:-20} });
   })
   
 });

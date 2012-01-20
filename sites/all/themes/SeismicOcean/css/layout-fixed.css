@@ -86,6 +86,7 @@ body {
 
 .sidebar-second #content {
   width: 645px;
+  min-height: 65.1em;
   margin-left: 0; /* LTR */
   margin-right: -645px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
