@@ -17,7 +17,7 @@
   width: auto;
   height: auto;
   overflow: visible;
-  font-size: 0.90em;
+  font-size: 1.075em;
   font-weight: bold;
 }
 
@@ -50,27 +50,50 @@
   float: left; /* LTR */
 }
 
-#block-nice_menus-2 ul.nice-menu a {
-  padding: 0.3em 5px 0.3em;
+#block-nice_menus-2 ul.nice-menu a:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
 
+#block-nice_menus-2 ul.nice-menu ul a {
+  padding: 0.4em 0.2em 0.2em 0.2em;
+  border-width: 0 1px;
+  border-color: #ccc;
+}
+
+#block-nice_menus-2 ul.nice-menu ul li:last-child a {
+  border-width: 0 1px 1px;
+}
+
+#block-nice_menus-2 ul.nice-menu a:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+
 #block-nice_menus-2 ul.nice-menu>li>a {
-  padding-top: 6px;
+  position: relative;
+  z-index: 6;
+  height: 21px;
+  padding-top: 7px;
+  padding-bottom: 0;
+  background-color: #2BD0F4;
 }
 
 #block-nice_menus-2 ul.nice-menu ul {
   visibility: hidden;
-  width: 100%;
-  top: 26px;
+  top: 28px; /* to do: transform to em ? */
   left: -1px; /* LTR */
   border: 0;
   margin-right: 0; /* LTR */
-  background-color: #2bd0f4;
   opacity: 0;
   transition: visibility 0.6s, opacity 0.6s;
   -moz-transition: visibility 0.6s, opacity 0.6s; /* Firefox 4 */
   -webkit-transition: visibility 0.6s, opacity 0.6s; /* Safari and Chrome */
   -o-transition: visibility 0.6s, opacity 0.6s; /* Opera */
+  box-shadow: 0px 1px 18px #555;
 }
 
 #block-nice_menus-2 ul.nice-menu li:hover ul {
@@ -88,13 +111,13 @@
 }
 
 #block-nice_menus-2 ul.nice-menu-down>li {
-  background-color: #2bd0f4;
   text-align: center;      
-  height: 26px;
+  height: 28px;  /* to do: transform to em ? */
 }
 
 #block-nice_menus-2 ul.nice-menu-down>li {
   width: 116px;
+  background-color: #2BD0F4;
 }
 
 /*
@@ -143,6 +166,7 @@
   width: 100%;
   clear: both;
   padding: 0;
+  background-color: #fff;
   color: #2BD0F4;
 }
 
@@ -155,89 +179,10 @@
 }
 
 #block-nice_menus-2 ul.nice-menu-down>li + li + li ul {
-  width: 100%;
-}
-
-#block-nice_menus-2 ul.nice-menu-down ul li {
+  width: auto;
 }
 
 #block-nice_menus-2 ul.nice-menu-down li ul li ul {
   left: 12.5em; /* LTR */
   top: -1px;
-}
-
-#block-nice_menus-2 ul.nice-menu-down .menuparent a {
-  padding-right: 0; /* LTR */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li.menuparent {
-  background: #2bd0f4;
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s; /* Firefox 4 */
-  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
-  -o-transition: background-color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down>li:hover  {
-  background-color: #000; /* LTR */
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s; /* Firefox 4 */
-  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
-  -o-transition: background-color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down>li:hover>a {
-  color: #fff;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s; /* Firefox 4 */
-  -webkit-transition: color 0.5s; /* Safari and Chrome */
-  -o-transition: color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down>li:hover>a:hover {
-  color: #2bd0f4;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s; /* Firefox 4 */
-  -webkit-transition: color 0.5s; /* Safari and Chrome */
-  -o-transition: color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li.menuparent:hover li {
-  background: #2bd0f4;
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s; /* Firefox 4 */
-  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
-  -o-transition: background-color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li.menuparent:hover li:hover {
-  background-color: #000;
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s; /* Firefox 4 */
-  -webkit-transition: background-color 0.5s; /* Safari and Chrome */
-  -o-transition: background-color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li.menuparent:hover li a {    
-  color: #000;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s; /* Firefox 4 */
-  -webkit-transition: color 0.5s; /* Safari and Chrome */
-  -o-transition: color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li.menuparent:hover li a:hover {    
-  color: #2bd0f4;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s; /* Firefox 4 */
-  -webkit-transition: color 0.5s; /* Safari and Chrome */
-  -o-transition: color 0.5s; /* Opera */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li li.menuparent {
-  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
-}
-
-#block-nice_menus-2 ul.nice-menu-down li li.menuparent:hover {
-  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
 }

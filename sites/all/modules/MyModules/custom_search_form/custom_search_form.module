@@ -1,0 +1,9 @@
+<?php
+
+function custom_search_form_form_alter(&$form, &$form_state, $form_id) {
+  // Remove the search form from the search result pages.
+  if ($form_id == 'search_form' && $_GET['q'] != 'search') {
+    unset($form['basic']['#title']);
+    $form['basic']['inline']['submit'] = array('#type' => 'image_button', '#value' => t('Go'), '#src' => 'sites/all/themes/SeismicOcean/images/search.png');
+  }
+}

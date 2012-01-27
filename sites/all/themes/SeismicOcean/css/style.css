@@ -44,16 +44,12 @@ body, caption, th, td, input, textarea, select, option, legend, fieldset {
  * TRACTAMENT DELS ENLLAÇOS
  */
 a, a:link, a:visited, a:active {
-    color: #ec7400;
-    text-decoration: underline;
+    color: #f35200;
+    text-decoration: none;
 }
 
 a:hover {
-  color: #181818;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s; /* Firefox 4 */
-  -webkit-transition: color 0.5s; /* Safari and Chrome */
-  -o-transition: color 0.5s; /* Opera */
+  text-decoration: underline;
 }
 
 .node_read_more a,
@@ -65,7 +61,6 @@ a:hover {
 .node-type-main-map .openlayers-popup-description .view-children ul a 
 {
   padding-left: 13px;
-  text-decoration: none;
   background: url("../images/read_more-bg.png") no-repeat left top;
 }
 
@@ -79,7 +74,7 @@ a:hover {
   bottom: 10px;
   right: 10px;
   padding: 4px 12px;
-  background-color: #ec7400;
+  background-color: #f35200;
   border-radius: 8px;
 }
 
@@ -109,7 +104,7 @@ a.read_m-border_rd {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  background-color: #ec7400;
+  background-color: #f35200;
   border-radius: 8px;
   padding: 4px 12px;
   color: #fff;
@@ -219,6 +214,10 @@ h3 a:active {
   border-bottom: 1px solid #ccc;
 }
 
+.front .node .content h2.title {
+  font-size: 2em;
+}
+
 .front .node .content p:last-child {
   margin-bottom: 0;
 }
@@ -318,7 +317,6 @@ h3 a:active {
  */
 #search {
     width: 258px;
-    height: 1.89em;
     background-color: #fff;
 }
 
@@ -329,23 +327,61 @@ h3 a:active {
 
 #edit-search-theme-form-1 {
   width: 200px;
-  height: 24px;
+  height: 26px;
   margin-top: 0;
   padding: 1px 0 1px 8px;
   border: 0;
   font-family: 'Terminal Dosis', sans-serif;
   font-size: 0.90em;
   font-weight: bold;
-  color: #ec7400;
+  color: #f35200;
 }
 
 #search .form-submit {
-  height: 26px;
+  height: 28px;
   margin: 0;
   display: block;
   float: right;
   vertical-align: middle;
 }
+
+/*
+ * ESTILS PER A LA PÀGINA DELS RESULTATS DE CERCA
+ */
+#search-form #edit-keys-wrapper {
+  display: block;
+  float: left;
+  margin: 0;
+}
+
+#search-form #edit-keys {
+  height: 21px;
+  padding: 0 0 0 6px;
+  border: 1px solid #d1d3d4;
+  border-radius: 0;
+  color: #F35200;
+}
+
+#search-form input.form-submit {
+  height: 23px;
+  vertical-align: middle;
+}
+
+.search-results {
+  border-top: 1px solid #d1d3d4;
+  clear: both;
+}
+
+div.search-result {
+  margin-top: 1em;
+  border-bottom: 1px solid #e6e7e8;
+}
+
+div.search-result dd {
+  margin-top: 0.357em;
+  margin-left: 0;
+}
+
 
 /*
  * ESTILS PER ALS TÍTOLS DE CONTENT
@@ -367,6 +403,15 @@ body.node-tipe-front-page #content {
 .node-type-front-page.node img {
   width: 100% !important;
   height: auto !important;
+}
+
+/*
+ * ESTILS PER A ALGUNS NODES O TIPUS DE NODE
+ */
+.page.node-type-front-page #content-area,
+.page.node-type-news #content-area  {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 /*
@@ -408,7 +453,7 @@ body.node-tipe-front-page #content {
 .project-preview .field-label,
 .secondary-projects label, .other-projects-page label {
   margin-right: 3px;
-  color: #F35200;
+  color: #2bd0f4;
   font-size: 1em;
   font-weight: normal;
   text-transform: uppercase;
@@ -563,7 +608,7 @@ body.node-tipe-front-page #content {
 
 #content-area .node-type-project .field-label {
   margin-right: 3px;
-  color: #f35200;
+  color: #2bd0f4;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
@@ -664,15 +709,20 @@ body.node-tipe-front-page #content {
 
 #map-menu .content {
   font-size: 0.875em;
-  padding: 0 10px 10px;
+  padding: 14px 10px 10px;
   background: #ebf6f9;
+}
+
+#map-menu .menu_block_wrapper {
+  padding-top: 6px;
+  background: url(../images/sepr.png) repeat-x top;
 }
 
 #map-menu ul {
   margin: 0;
   padding: 0;
   clear: both;
-  background: #ebf6f9 url(../images/sepr.png) repeat-x bottom;
+  background: url(../images/sepr.png) repeat-x bottom;
 }
 
 #map-menu ul ul {
@@ -927,6 +977,13 @@ body.node-tipe-front-page #content {
 }
 
 /*
+ * ESTILS PER A LA PÀGINA DE LINKS
+ */
+.view-links .views-field-title {
+  margin: 0.5em 0;
+}
+
+/*
  * ESTILS PER A LA PÀGINA NEWS
  */
 .view-news.view-display-id-default .views-field-title a {
@@ -935,36 +992,54 @@ body.node-tipe-front-page #content {
   color: #2BD0F4;
 }
 
+.view-news.view-display-id-default .views-field-title a:hover {
+  text-decoration: underline;
+}
+
+/*
+ * ESTILS PER A LA PÀGINA DE UNA NOTÍCIA
+ */
+.node-type-news div.meta span.submitted {
+  color: #a7a9ac;
+}
+
 /*
  * ESTILS PER ALS PAGINADORS
  */
-div.pager .pager {
+div.item-list .pager {
   float: right;
+  margin-top: 0;
 }
 
-div.pager .pager li {
+div.item-list .pager li {
+  width: 1.072em;
+  height: 1.072em;
   display: block;
   float: left;
-  width: 1.5em;
-  height: 1.5em;
   background: #f1f1f2;
   padding: 0;
-  line-height: 1.5em;
   text-align: center;
 }
 
-div.pager .pager li.pager-current {
+div.item-list .pager li.pager-current {
+  width: 1.25em;
+  height: 1.25em;
   background-color: #dcddde;
+  font-size: 0.857em;
   font-weight: normal;
 }
 
-div.pager .pager li a {
+div.item-list .pager li a {
   display: block;
   padding: 0;
   text-decoration: none;
 }
 
-div.pager .pager li a:hover {
+div.item-list .pager li.pager-item a {
+  font-size: 0.857em;
+}
+
+div.item-list .pager li:hover {
   background-color: #dcddde;
   transition: background-color 0.4s;
   -moz-transition: background-color 0.4s; /* Firefox 4 */
@@ -972,11 +1047,17 @@ div.pager .pager li a:hover {
   -o-transition: background-color 0.4s; /* Opera */
 }
 
-div.pager .pager li.pager-next a, 
-div.pager .pager li.pager-previous a {
-  background-color: #f65100;
-  font-size: 1.5em;
+div.item-list .pager li.pager-next, 
+div.item-list .pager li.pager-previous
+{
+  background-color: #f65100;  
+}
+
+div.item-list .pager li.pager-next a, 
+div.item-list .pager li.pager-previous a {
+  font-size: 1.2em;
   line-height: 1em;
+  color: #fff;
 }
 
 /*
@@ -1003,6 +1084,7 @@ div.pager .pager li.pager-previous a {
   width: 110px;
   float: left;
   text-align: right;
+  font-weight: normal;
 }
 
 #contact-mail-page .contact-form-content .form-item input,
@@ -1042,10 +1124,12 @@ div.pager .pager li.pager-previous a {
 
 #contact-mail-page .contact-form-content #accept-privacy-policy-wrapper input {
   margin-left: 126px;
+  position: relative;
+  bottom: 2px;
 }
 
 #contact-mail-page .contact-form-content #accept-privacy-policy-wrapper .description {
-  padding-top: 2px;
+  display: inline;
 }
 
 #contact-mail-page .contact-form-content #edit-submit {
@@ -1053,14 +1137,14 @@ div.pager .pager li.pager-previous a {
   clear: both;
   margin-top: 15px;
   margin-right: 65px;
-  padding: 5px 25px;
-  background: #f35200;
   border: 0;
   -moz-border-radius: 8px;
-  border-radius: 8px;
-  color: #fff;
   cursor: pointer;
-  font-weight: bold;
+  background-color: #f35200;
+  border-radius: 8px;
+  padding: 4px 28px;
+  color: #fff;
+  text-decoration: none;
 }
 
 #contact-mail-page .contact-form-content #edit-submit:hover {

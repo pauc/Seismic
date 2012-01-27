@@ -95,6 +95,36 @@ function zen_menu_item__menu_block__1($link, $has_children, $menu = '', $in_acti
   return $ret;
 }
 
+function SeismicOcean_breadcrumb($breadcrumb) {
+  // Determine if we are to display the breadcrumb.
+  $show_breadcrumb = theme_get_setting('zen_breadcrumb');
+  if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
+
+    // Optionally get rid of the homepage link.
+    $show_breadcrumb_home = theme_get_setting('zen_breadcrumb_home');
+    if (!$show_breadcrumb_home) {
+      array_shift($breadcrumb);
+    }
+
+    // Return the breadcrumb with separators.
+    if (!empty($breadcrumb)) {
+      $breadcrumb_separator = "<span>".theme_get_setting('zen_breadcrumb_separator')."</span>";
+      $trailing_separator = $title = '';
+      if (theme_get_setting('zen_breadcrumb_title')) {
+        if ($title = drupal_get_title()) {
+          $trailing_separator = $breadcrumb_separator;
+        }
+      }
+      elseif (theme_get_setting('zen_breadcrumb_trailing')) {
+        $trailing_separator = $breadcrumb_separator;
+      }
+      return '<div class="breadcrumb">' . implode($breadcrumb_separator, $breadcrumb) . "$trailing_separator$title</div>";
+    }
+  }
+  // Otherwise, return an empty string.
+  return '';
+}
+
 /**
 * Override or insert PHPTemplate variables into the search_theme_form template.
 *
@@ -130,36 +160,6 @@ function SeismicOcean_preprocess_search_theme_form(&$vars, $hook) {
 
   // Collect all form elements to make it easier to print the whole form.
   $vars['search_form'] = implode($vars['search']);
-}
-
-function SeismicOcean_breadcrumb($breadcrumb) {
-  // Determine if we are to display the breadcrumb.
-  $show_breadcrumb = theme_get_setting('zen_breadcrumb');
-  if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
-
-    // Optionally get rid of the homepage link.
-    $show_breadcrumb_home = theme_get_setting('zen_breadcrumb_home');
-    if (!$show_breadcrumb_home) {
-      array_shift($breadcrumb);
-    }
-
-    // Return the breadcrumb with separators.
-    if (!empty($breadcrumb)) {
-      $breadcrumb_separator = "<span>".theme_get_setting('zen_breadcrumb_separator')."</span>";
-      $trailing_separator = $title = '';
-      if (theme_get_setting('zen_breadcrumb_title')) {
-        if ($title = drupal_get_title()) {
-          $trailing_separator = $breadcrumb_separator;
-        }
-      }
-      elseif (theme_get_setting('zen_breadcrumb_trailing')) {
-        $trailing_separator = $breadcrumb_separator;
-      }
-      return '<div class="breadcrumb">' . implode($breadcrumb_separator, $breadcrumb) . "$trailing_separator$title</div>";
-    }
-  }
-  // Otherwise, return an empty string.
-  return '';
 }
 
 /**

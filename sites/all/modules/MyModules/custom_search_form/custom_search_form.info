@@ -1,0 +1,5 @@
+; $Id$
+name = "Custom Search Form"
+description = "Cambia l'aspecte del formulari de cerca a la pàgina dels resultats de cerca."
+core = 6.x
+package = My Modules

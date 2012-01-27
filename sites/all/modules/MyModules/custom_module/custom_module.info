@@ -1,5 +1,5 @@
 ; $Id$
 name = "Custom Module"
-description = "Returns a list of products according to category."
+description = "Diferents funcions que s'executen en desar una zona, survey, line..."
 core = 6.x
 package = My Modules
