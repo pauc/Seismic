@@ -331,9 +331,6 @@ h3 a:active {
   margin-top: 0;
   padding: 1px 0 1px 8px;
   border: 0;
-  font-family: 'Terminal Dosis', sans-serif;
-  font-size: 0.90em;
-  font-weight: bold;
   color: #f35200;
 }
 
@@ -412,6 +409,22 @@ body.node-tipe-front-page #content {
 .page.node-type-news #content-area  {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+}
+
+p>.content-image {
+  margin-bottom: -1em;
+}
+
+.content-image {
+  width: 100% !important;
+  height: auto !important;
+  outline: 1px solid #ddd;
+}
+
+.content-image-description p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #2bd0f4;
 }
 
 /*
@@ -655,19 +668,6 @@ body.node-tipe-front-page #content {
 
 #content-area .node-type-project .field-field-project-body-participants ul li {
   margin: 0.4em 0;
-}
-
-#content-area .node-type-project .project-task-image,
-#content-area .node-type-project .project-image {
-  width: 100% !important;
-  height: auto !important;
-  outline: 1px solid #ddd;
-}
-
-#content-area .node-type-project .project-image-description p {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  color: #2bd0f4;
 }
 
 /* PER ALS PROJECTES SECUNDARIS I ALTRES PROJECTES */
