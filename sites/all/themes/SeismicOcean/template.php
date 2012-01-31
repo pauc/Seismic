@@ -398,3 +398,52 @@ function SeismicOcean_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+/**
+ * Format the send by e-mail link
+ *
+ * @return
+ *   array of formatted attributes
+ * @ingroup themeable
+ */
+function SeismicOcean_print_mail_format_link() {
+  $print_mail_link_class  = variable_get('print_mail_link_class', PRINT_MAIL_LINK_CLASS_DEFAULT);
+  $print_mail_show_link = variable_get('print_mail_show_link', PRINT_MAIL_SHOW_LINK_DEFAULT);
+  $print_mail_link_text = filter_xss(variable_get('print_mail_link_text', t('Send to friend')));
+
+  $img = path_to_theme() . '/images/mail_icon.gif';
+  $title = t('Send this page by e-mail.');
+  $class = strip_tags($print_mail_link_class);
+  $new_window = FALSE;
+  $format = _print_format_link_aux($print_mail_show_link, $print_mail_link_text, $img);
+
+  return array('text' => $format['text'],
+               'html' => $format['html'],
+               'attributes' => print_fill_attributes($title, $class, $new_window),
+              );
+}
+
+/**
+ * Format the Printer-friendly link
+ *
+ * @return
+ *   array of formatted attributes
+ * @ingroup themeable
+ */
+function SeismicOcean_print_format_link() {
+  $print_html_link_class = variable_get('print_html_link_class', PRINT_HTML_LINK_CLASS_DEFAULT);
+  $print_html_new_window = variable_get('print_html_new_window', PRINT_HTML_NEW_WINDOW_DEFAULT);
+  $print_html_show_link = variable_get('print_html_show_link', PRINT_HTML_SHOW_LINK_DEFAULT);
+  $print_html_link_text = filter_xss(variable_get('print_html_link_text', t('Printer-friendly version')));
+
+  $img = path_to_theme() . '/images/print_icon.gif';
+  $title = t('Display a printer-friendly version of this page.');
+  $class = strip_tags($print_html_link_class);
+  $new_window = $print_html_new_window;
+  $format = _print_format_link_aux($print_html_show_link, $print_html_link_text, $img);
+
+  return array('text' => $format['text'],
+               'html' => $format['html'],
+               'attributes' => print_fill_attributes($title, $class, $new_window),
+              );
+}
