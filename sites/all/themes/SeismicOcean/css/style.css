@@ -1169,6 +1169,7 @@ div.item-list .pager li.pager-previous a {
  */
 #content-area .view-admin-front-images .views-row {
   margin: 1.5em 0;
+  clear: left;
 }
 
 .view-admin-front-images .view-header {
@@ -1193,16 +1194,32 @@ div.item-list .pager li.pager-previous a {
 .view-admin-front-images .views-field-title {
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: #2bd0f4;
 }
 
 .view-admin-front-images .views-field-field-front-image-fid {
   margin-bottom: 10px;
+  float: left;
+}
+
+.view-admin-front-images .views-field-body {
+  width: 700px;
+  margin-left: 10px;
+  float: left;
+}
+
+.view-admin-front-images .views-field-body p:first-child {
+  margin-top: 0;
+}
+
+.view-admin-front-images .views-field-edit-node {
+  clear: left;
 }
 
 .view-admin-front-images .views-field-edit-node,
 .view-admin-front-images .views-field-delete-node
 {
-  display: inline;
+  float: left;
   margin-top: 10px;
   margin-right: 10px;
 }

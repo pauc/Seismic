@@ -294,7 +294,8 @@ ul.links li {
 .region-under-content:after,
 .project-preview .views-row:after,
 .other-projects .view-content:after,
-.field-field-project-body-participants:after
+.field-field-project-body-participants:after,
+.view-admin-front-images .views-row:after
 {
   content: ".";
   display: block;
