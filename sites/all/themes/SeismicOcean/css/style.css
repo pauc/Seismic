@@ -733,8 +733,7 @@ p>.content-image {
 }
 
 #popup_close {
-  width: 8px !important;
-  height: 8px !important;
+  width: 12px !important;
   background-image: url(../ol-images/close.png);
 }
 
@@ -777,6 +776,8 @@ p>.content-image {
 .node-type-main-map #content-area .openlayers-popup-name {
   padding-bottom: 2px;
   border-bottom: 2px solid #d1d3d4;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .node-type-main-map #content-area .openlayers-popup-description .view-content, 
