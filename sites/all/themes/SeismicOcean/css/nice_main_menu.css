@@ -25,7 +25,7 @@
   padding: 0;
 }
 
-#block-nice_menus-2 .nice-menu a:link, .nice-menu a:visited, .nice-menu a:active {
+#block-nice_menus-2 .nice-menu a:link, #block-nice_menus-2 .nice-menu a:visited, #block-nice_menus-2 .nice-menu a:active {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -209,4 +209,50 @@
 #block-nice_menus-2 ul.nice-menu-down li ul li ul {
   left: 12.5em; /* LTR */
   top: -1px;
+}
+
+/*
+ * ESTILS PER A ADMIN MENU
+ */
+#block-nice_menus-1 {
+  position: relative;
+  z-index: 12;
+}
+
+#block-nice_menus-1 h2 {
+  height: auto;
+}
+
+#nice-menu-1 {
+  height: 20px;
+  margin: 0;
+  padding-top: 10px;
+  list-style: none;
+}
+
+#nice-menu-1 li {
+  float: left;
+  margin: 0 20px;
+}
+
+#nice-menu-1 li ul {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  background-color: #fff;
+  padding: 0 2px;
+}
+
+#nice-menu-1 li ul li {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#nice-menu-1 a {
+  display: block;
+  color: #00b;
+}
+
+#nice-menu-1 a:hover {
+  color: #b02;
 }

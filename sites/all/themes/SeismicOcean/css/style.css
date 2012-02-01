@@ -269,42 +269,6 @@ h3 a:active {
   overflow: visible;
 }
 
-#block-nice_menus-1 h2 {
-  height: auto;
-}
-
-#block-nice_menus-1 .content {
-  padding: 5px;
-}
-
-#nice-menu-1 {
-  z-index: 50;
-  list-style: none;
-  margin: 0;
-}
-
-#nice-menu-1 li {
-  float: left;
-  margin: 0 20px;
-}
-
-#nice-menu-1 li ul {
-  background-color: #fff;
-  padding: 0 2px;
-}
-
-#nice-menu-1 li ul li {
-  margin: 2px 0;
-}
-
-#nice-menu-1 a {
-  color: #00b;
-}
-
-#nice-menu-1 a:hover {
-  color: #b02;
-}
-
 /*
  * EL·LIMINACIÓ DEL MARGE DELS MENUS ALS BLOCS DE LES COLUMNES LATERALS (Ex: map menu)
  */
