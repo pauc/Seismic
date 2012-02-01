@@ -1,6 +1,6 @@
 body {
   color: #808285;
-  text-rendering: optimize-legibility;
+  //text-rendering: optimize-legibility;
 }
 
 /*
@@ -349,9 +349,11 @@ div.search-result dd {
  */
 #content h1 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.image-description {
+.front .node .content h2.title a {
+  font-weight: bold;
 }
 
 /*

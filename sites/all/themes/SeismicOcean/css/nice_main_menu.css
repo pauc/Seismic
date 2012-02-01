@@ -70,6 +70,7 @@
 #block-nice_menus-2 ul.nice-menu ul a {
   padding: 0.4em 0.2em 0.2em 0.2em;
   border-width: 0 1px;
+  border-style: solid;
   border-color: #ccc;
 }
 
