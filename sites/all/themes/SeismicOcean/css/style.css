@@ -1138,6 +1138,10 @@ div.item-list .pager li.pager-previous a {
 /*
  * ESTILS DE LES PÀGINES D'ADMINISTRACIÓ
  */
+.section-node-edit div.help {
+  color: #005500;
+}
+
 .node-form .form-item {
   padding: 12px 6px;
   background-color: #eee;
