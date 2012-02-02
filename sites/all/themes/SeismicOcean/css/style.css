@@ -139,17 +139,39 @@ h3 a:active {
 }
 
 /*
- * TÍTOLS DELS BLOCKS DE POSEIDON
+ * TÍTOLS DELS BLOCKS DE PROJECTES
  */
-#block-views-poseidon-block_1 h2,
+
 #content-area .node-type-project #project_extra_fields .extra-fields-header h2,
 .project-preview-header h2
 {
   font-size: 28px;
   line-height: 1em;
+  color: #fff;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2 a,
+.project-preview-header h2 a
+{
+  color: #fff;
+  display: block;
+}
+
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2 a:hover,
+.project-preview-header h2 a:hover
+{
+  color: #2BD0F4;
+}
+
+#block-views-poseidon-block_1 h2 {
+  font-size: 28px;
+  line-height: 1em;
+}
+
+#block-views-poseidon-block_1 h2 a,  .project-preview-header h2 a {
+  display: block;
   letter-spacing: 0.2em;
   font-weight: normal;
-  color: #fff;
 }
 
 #block-views-poseidon-block_1 h2 {
@@ -158,17 +180,17 @@ h3 a:active {
   background: url(../images/block-poseidon-h2-bg.png) right top no-repeat;
 }
 
+#block-views-poseidon-block_1 h2 a:first-line,
+#content-area .node-type-project #project_extra_fields .extra-fields-header h2:first-line,
+.project-preview-header h2 a:first-line {
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
 #content-area .node-type-project #project_extra_fields .extra-fields-header h2,
 .project-preview-header {
   margin: 0;
   padding: 18px 20px 16px 68px;
-}
-
-#block-views-poseidon-block_1 h2:first-line,
-#content-area .node-type-project #project_extra_fields .extra-fields-header h2:first-line,
-.project-preview-header h2:first-line {
-  font-weight: bold;
-  letter-spacing: normal;
 }
 
 #block-views-poseidon-block_1 img.imagefield-field_project_logo,
@@ -513,6 +535,15 @@ p>.content-image {
   font-weight: bold;
 }
 
+.project-preview.other-projects .view-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-preview.other-projects .view-header a:hover {
+  color: #2BD0F4;
+}
+
 .project-preview.other-projects .view-header p {
   margin: 0;
 }
@@ -636,8 +667,21 @@ p>.content-image {
 }
 
 /* PER ALS PROJECTES SECUNDARIS I ALTRES PROJECTES */
-#content-area .node-type-secondary-project #project_extra_fields .extra-fields-header h2 {
+#content-area .node-type-secondary-project #project_extra_fields .extra-fields-header h2,
+#content-area .node-type-project-other #project_extra_fields .extra-fields-header h2 
+{
   padding-left: 12px;
+}
+
+/* ESPECÍFIC PER A POSEIDON */
+.node-type-project .extra-fields-header h2 {
+  letter-spacing: 0.2em;
+  font-weight: normal;
+}
+
+.node-type-project .extra-fields-header h2:first-line {
+  letter-spacing: normal;
+  font-weight: bold;
 }
 
 /* ESPECÍFIC PER A OCEANSEIS */

@@ -52,10 +52,22 @@
  * @see zen_preprocess_block()
  * @see zen_process()
  */
+if ($title == "Data map") {
+  $link_to = "map";
+}
+if ($title == "News"){
+  $link_to = "news";
+}
+if ($title == "Projects") {
+   $link_to = "projects";
+}
+if ($title == "Poseidon project") {
+   $link_to = "projects/poseidon";
+}
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>">
   <?php if ($title): ?>
-    <h2 class="title"><?php print $title; ?></h2>
+    <h2 class="title"><a href="<?php print $link_to; ?>"><?php print $title; ?></a></h2>
   <?php endif; ?>
 
   <div class="content">

@@ -49,6 +49,14 @@ div.block {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
+.block h2 a, .block h2 a:link, .block h2 a:visited, .block h2 a:active {
+  color: #fff;
+}
+
+.block h2 a:hover {
+  color: #2bd0f4;
+}
+
 /*
  * ESTILS PER AL BLOCK POSEIDON (front)
  */
@@ -168,10 +176,6 @@ div.block {
   font-size: 1.8em;
   letter-spacing: 0em;
   color: #000;
-}
-
-#block-block-4 ul li a:hover {
-  text-decoration: underline;
 }
 
 /*
