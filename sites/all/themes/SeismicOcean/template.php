@@ -204,13 +204,14 @@ function SeismicOcean_preprocess_search_result(&$variables) {
  * Format the "Submitted by username on date/time" for each node // "by username" eliminated. 
  *
  * @ingroup themeable
- */
+ *
 function SeismicOcean_node_submitted($node) {
   return t('@datetime',
     array(
       '@datetime' => format_date($node->created, 'small'),
     ));
 }
+*/
 
 function SeismicOcean_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
   global $pager_page_array, $pager_total;

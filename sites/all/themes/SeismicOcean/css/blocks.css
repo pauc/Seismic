@@ -77,7 +77,7 @@ div.block {
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
 .view-id-projects.view-display-id-block_1 .views-field-title {
-  padding: 4px 7px;
+  padding: 5px 7px 1px;
   background-color: #2bd0f4;
   border: 0;
   border-top-left-radius: 8px;
@@ -85,6 +85,10 @@ div.block {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.view-id-projects.view-display-id-block_1 .views-field-title a {
+  color: #fff;
 }
 
 .view-id-projects.view-display-id-block_1 .views-field-nothing {
@@ -107,12 +111,12 @@ div.block {
   border-bottom: 1px solid #dcddde;
 }
 
-.block .view-news .views-field-title {
+.block .view-news .views-field-title a {
   color: #2bd0f4;
   text-transform: uppercase;
 }
 
-.block .view-news .views-field-created {
+.block .view-news .views-field-field-news-item-date-value {
   margin: 2px 0;
 }
 

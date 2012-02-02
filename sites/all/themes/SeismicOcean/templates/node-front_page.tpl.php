@@ -103,7 +103,11 @@
     <?php if($is_front): ?>
         <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
     <?php endif; ?>
-    <?php print $content; ?>
+    <?php if($teaser): ?>
+      <?php print $field_front_summary[0]['value']; ?>
+    <?php else: ?>
+      <?php print $content; ?>
+    <?php endif; ?>
   </div>
 
   <?php print $links; ?>
