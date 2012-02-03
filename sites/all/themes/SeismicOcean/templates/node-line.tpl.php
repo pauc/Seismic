@@ -151,10 +151,10 @@
               </div>
               <div class="field clearfix">
                 <span class="field-label">
-                  <?php print $node->content['field_line_dates']['field']['#title']; ?>:
+                  <?php print $node->content['field_line_date']['field']['#title']; ?>:
                 </span>
                 <span class="field-data">
-                  <?php print $field_line_dates[0]['view']; ?>
+                  <?php print $field_line_date[0]['view']; ?>
                 </span>
               </div>
               <div class="field clearfix">
