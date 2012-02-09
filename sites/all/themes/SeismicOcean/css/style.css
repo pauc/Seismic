@@ -385,9 +385,22 @@ body.node-tipe-front-page #content {
   
 }
 
-.node-type-front-page.node img {
-  width: 100% !important;
-  height: auto !important;
+body.node-type-front-page.page-seismic-oceanography .node h2 {
+  color: #2BD0F4;
+  font-size: 1em;
+  font-weight: normal;
+  margin-right: 3px;
+  text-transform: uppercase;
+  font-family: 'DroidSansRegular',"Helvetica Neue",Verdana,Tahoma,"DejaVu Sans",sans-serif;
+}
+
+body.node-type-front-page.page-seismic-oceanography .node div + h2,
+body.node-type-front-page.page-seismic-oceanography .node p + h2 {
+  margin-top: 1em;
+}
+
+.node-type-front-page.node .content-image-description {
+  border-bottom: 1px solid #bbb;
 }
 
 /*
