@@ -101,7 +101,6 @@
   <?php endif; ?>
 
   <div class="content">
-    <?php print $content; ?>
     <?php if(!$teaser): ?>
       <div id="map">
         <?php print views_embed_view('zones', 'page_1', $nid); ?>
@@ -117,6 +116,9 @@
       ?>
       </div>
     <?php endif; ?>
+    <div class="main-map-content-body">
+      <?php print $content; ?>
+    </div>
   </div>
 
   <?php print $links; ?>

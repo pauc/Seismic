@@ -73,6 +73,14 @@ div.block {
   border-bottom: 1px solid #ccc;
 }
 
+#block-views-poseidon-block_1 .views-field-field-project-summary-value p {
+  margin-top: 0;
+}
+
+#block-views-poseidon-block_1 .views-field-field-project-summary-value p:last-child {
+  margin-bottom: 0;
+}
+
 /*
  * ESTILS PERL AL BLOC DELS PROJECTES
  */

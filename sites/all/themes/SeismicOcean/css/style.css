@@ -717,11 +717,20 @@ p>.content-image {
   margin-bottom: 68px;
 }
 
+.node-type-main-map #map {
+  margin-bottom: 20px;
+}
+
 #map-menu {
   width: 220px;
   float: right;
   background-color: #ebf6f9;
   text-transform: uppercase;
+}
+
+.main-map-content-body {
+  width: 695px;
+  clear: left;
 }
 
 #advert {
