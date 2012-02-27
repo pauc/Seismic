@@ -159,18 +159,18 @@
               </div>
               <div class="field clearfix">
                 <span class="field-label">
-                  <?php print $node->content['field_line_parent_zone']['field']['#title']; ?>:
+                  <?php print $node->content['field_line_parent_zone_ref']['field']['#title']; ?>:
                 </span>
                 <span class="field-data">
-                  <?php print $field_line_parent_zone[0]['view']; ?>
+                  <?php print $field_line_parent_zone_ref[0]['view']; ?>
                 </span>
               </div>
               <div class="field clearfix">
                 <span class="field-label">
-                  <?php print $node->content['field_line_parent_survey']['field']['#title']; ?>:
+                  <?php print $node->content['field_line_parent_survey_ref']['field']['#title']; ?>:
                 </span>
                 <span class="field-data">
-                  <?php print $field_line_parent_survey[0]['view']; ?>
+                  <?php print $field_line_parent_survey_ref[0]['view']; ?>
                 </span>
               </div>
             </div>
