@@ -981,6 +981,10 @@ p>.content-image {
   border-bottom: 1px solid #d1d3d4;
 }
 
+#line-profiles .profile-data .field p {
+  margin: 0;
+}
+
 #line-profiles .profile-data .field-label {
   float: left;
   color: #2bd0f4;
@@ -1009,6 +1013,17 @@ p>.content-image {
 }
 
 /*
+ * ESTILS PER A LES PÀGINES DE BIBLIOGRAFIA
+ */
+.node-type-biblio #content h1 {
+  text-transform: none;
+}
+
+.node-type-biblio #content table td {
+  padding: 5px;
+}
+
+/*
  * ESTILS PER A LA PÀGINA DE LINKS
  */
 .view-links .views-field-title {
@@ -1018,14 +1033,12 @@ p>.content-image {
 /*
  * ESTILS PER A LA PÀGINA NEWS
  */
-.view-news.view-display-id-page_1 .views-field-title a {
+.view-news.view-display-id-page_1 .views-field-title h2 {
+  margin: 0;
+  font-family: 'DroidSansRegular',"Helvetica Neue",Verdana,Tahoma,"DejaVu Sans",sans-serif;
   font-size: 1.1em;
-  text-decoration: none;
+  text-transform: none;
   color: #2BD0F4;
-}
-
-.view-news.view-display-id-page_1 .views-field-title a:hover {
-  text-decoration: underline;
 }
 
 /*

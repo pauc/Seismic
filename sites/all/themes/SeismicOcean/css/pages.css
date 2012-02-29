@@ -92,7 +92,7 @@ div#site-name /* The name of the website */ {
 
 #site-slogan /* The slogan (or tagline) of a website */ {
   float: left;
-  padding: 0.957em 0 3px 30px;
+  padding: 0.769em 0 7px 30px;
   border-left: 1px solid #fff;
   color: #fff;
   font-size: 1.3em;

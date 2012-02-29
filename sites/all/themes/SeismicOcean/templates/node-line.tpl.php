@@ -173,6 +173,16 @@
                   <?php print $field_line_parent_survey_ref[0]['view']; ?>
                 </span>
               </div>
+              <?php if ($field_line_data_owner[0]['value']): ?>
+                <div class="field clearfix">
+                  <span class="field-label">
+                    <?php print $node->content['field_line_data_owner']['field']['#title']; ?>:
+                  </span>
+                  <span class="field-data">
+                    <?php print $field_line_data_owner[0]['view']; ?>
+                  </span>
+                </div>
+              <?php endif; ?>
             </div>
             <div class="col-2 col">
               <div class="field clearfix">
