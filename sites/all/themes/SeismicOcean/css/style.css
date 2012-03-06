@@ -594,6 +594,10 @@ p>.content-image {
   background-color: #dbeff4;
 }
 
+#content-area .node-type-project-other #project_extra_fields {
+  position: static;
+}
+
 #content-area .node-type-project #project_extra_fields .extra-fields-header {
   position: relative;
   background: #000 url(../images/white-square.png) no-repeat 215px top;
@@ -641,10 +645,18 @@ p>.content-image {
   border-bottom: 1px solid #bbb;
 }
 
+#content-area .node-type-project .project-task + p {
+  display: none;
+}
+
 #content-area .node-type-project h3 {
   color: #808285;
   font-size: 1em;
   font-weight: bold;
+}
+
+#content-area .node-type-project .project-task:last-child {
+  border-bottom: 0;
 }
 
 #content-area .node-type-project h3 span {
@@ -695,6 +707,9 @@ p>.content-image {
 .node-type-project .extra-fields-header h2:first-line {
   letter-spacing: normal;
   font-weight: bold;
+}
+
+.node-type-project .field-field-project-data-map-for-posei {
 }
 
 /* ESPECÍFIC PER A OCEANSEIS */
