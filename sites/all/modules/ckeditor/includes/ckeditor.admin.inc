@@ -1,7 +1,7 @@
 <?php
 /**
  * CKEditor - The text editor for the Internet - http://ckeditor.com
- * Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+ * Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
  *
  * == BEGIN LICENSE ==
  *
@@ -42,18 +42,18 @@ function ckeditor_admin_main() {
   $ckconfig_file = $editor_path .'/config.js';
   if (!_ckeditor_requirements_isinstalled()) {
     drupal_set_message(t('Checking for <code>%filename</code> or <code>%file</code>.', array('%filename' => $ckconfig_file, '%file' => 'sites/all/libraries/ckeditor/ckeditor.js')));
-    drupal_set_message(t('The CKEditor component is not installed correctly. Please go to the <a href="!ckeditorlink">CKEditor homepage</a> in order to download the latest version. After that you must extract the files to the <code>%ckeditorpath</code> or <code>%librarypath</code> directory and make sure that the <code>%ckeditorfile</code> or <code>%ckeditorlibrary</code> file exists. Refer to the <a href="!readme">readme.txt</a> file for more information.', array('!ckeditorlink' => url('http://ckeditor.com/download'), '!readme' => url('admin/help/ckeditor'), '%ckeditorpath' => $editor_path, '%ckeditorsubdir' => $editor_path .'/editor', '%ckeditorfile' => $editor_path .'/ckeditor.js', '%ckeditorlibrary' => 'sites/all/libraries/ckeditor/ckeditor.js', '%librarypath' => 'sites/all/libraries/ckeditor')), 'error');
-    drupal_set_message(t('If you have CKEditor already installed, edit the <a href="!editg">CKEditor Global Profile</a> and update the CKEditor path.', array('!editg' => url('admin/settings/ckeditor/editg'))), 'warning');
+    drupal_set_message(t('The CKEditor component is not installed correctly. Please go to the <a href="@ckeditorlink">CKEditor homepage</a> in order to download the latest version. After that you must extract the files to the <code>%ckeditorpath</code> or <code>%librarypath</code> directory and make sure that the <code>%ckeditorfile</code> or <code>%ckeditorlibrary</code> file exists. Refer to the <a href="!readme">readme.txt</a> file for more information.', array('@ckeditorlink' => url('http://ckeditor.com/download'), '!readme' => url('admin/help/ckeditor'), '%ckeditorpath' => $editor_path, '%ckeditorsubdir' => $editor_path .'/editor', '%ckeditorfile' => $editor_path .'/ckeditor.js', '%ckeditorlibrary' => 'sites/all/libraries/ckeditor/ckeditor.js', '%librarypath' => 'sites/all/libraries/ckeditor')), 'error');
+    drupal_set_message(t('If you have CKEditor already installed, edit the <a href="@editg">CKEditor Global Profile</a> and update the CKEditor path.', array('@editg' => url('admin/settings/ckeditor/editg'))), 'warning');
     return FALSE;
   }
 
   if (module_exists('wysiwyg')) {
-    drupal_set_message(t('The WYSIWYG module was detected. Using both modules at the same time may cause problems. It is recommended to turn the WYSIWYG module off (!wysiwygdisablelink).', array('!wysiwygdisablelink' => l(t('click here to disable'), 'ckeditor/disable/wysiwyg'))), 'warning');
+    drupal_set_message(t('The WYSIWYG module was detected. Using both modules at the same time may cause problems. It is recommended to turn the WYSIWYG module off (<a href="@wysiwygdisablelink">click here to disable</a>).', array('@wysiwygdisablelink' => url('ckeditor/disable/wysiwyg/' . drupal_get_token('ckeditorDisableWysiwyg')))), 'warning');
   }
 
   $access_ckeditor_roles = user_roles(FALSE, 'access ckeditor');
   if (!$access_ckeditor_roles) {
-    drupal_set_message(t('There is currently no role with the "access ckeditor" permission. Visit the <a href="!acl">Permissions</a> administration section.', array('!acl' => url('admin/user/permissions'))), 'warning');
+    drupal_set_message(t('There is currently no role with the "access ckeditor" permission. Visit the <a href="@acl">Permissions</a> administration section.', array('@acl' => url('admin/user/permissions'))), 'warning');
   }
   else {
     $result = db_query_range("SELECT name FROM {ckeditor_settings} WHERE name<>'CKEditor Global Profile'", 0, 1);
@@ -82,7 +82,7 @@ function ckeditor_admin_main() {
           $list .= "<li>". $access_ckeditor_roles[$rid] ."</li>";
         }
         $list .= "</ul>";
-        drupal_set_message(t('Not all roles with the "<a href="!access">access ckeditor</a>" permission are associated with CKEditor profiles. As a result, users with the following roles may be unable to use CKEditor: !list Create new or edit existing CKEditor profiles below and check the "Roles allowed to use this profile" option in the <strong>Basic setup</strong> section.', array('!access' => url('admin/user/permissions'), '!list' => $list)), 'warning');
+        drupal_set_message(t('Not all roles with the "<a href="@access">access ckeditor</a>" permission are associated with CKEditor profiles. As a result, users with the following roles may be unable to use CKEditor: !list Create new or edit existing CKEditor profiles below and check the "Roles allowed to use this profile" option in the <strong>Basic setup</strong> section.', array('@access' => url('admin/user/permissions'), '!list' => $list)), 'warning');
       }
     }
   }
@@ -124,12 +124,12 @@ function ckeditor_profile_overview() {
     $output .= '<p>'. l(t('Create a new profile'), 'admin/settings/ckeditor/add') .'</p>';
   }
   else {
-    drupal_set_message(t('No profiles found. Click here to <a href="!create">create a new profile</a>.', array('!create' => url('admin/settings/ckeditor/add'))));
+    drupal_set_message(t('No profiles found. Click here to <a href="@create">create a new profile</a>.', array('@create' => url('admin/settings/ckeditor/add'))));
   }
 
   $rows = array();
   if (!isset($profiles['CKEditor Global Profile'])) {
-    drupal_set_message(t('The global profile can not be found. Click here to <a href="!create">create the global profile</a>.', array('!create' => url('admin/settings/ckeditor/addg'))));
+    drupal_set_message(t('The global profile can not be found. Click here to <a href="@create">create the global profile</a>.', array('@create' => url('admin/settings/ckeditor/addg'))));
   }
   else {
     $output .= "<h3>". t("Global settings") ."</h3>";
@@ -195,7 +195,7 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
   $roles = $orig_roles;
 
   if (!empty($profile->rids) && !user_roles(FALSE, 'access ckeditor')) {
-    drupal_set_message(t('You have not assigned the "access ckeditor" <a href="!permissions">permissions</a> yet. It is recommended to assign the "access ckeditor" <a href="!permissions">permissions</a> before updating CKEditor profiles.', array('!permissions' => url('admin/user/permissions'))), 'warning');
+    drupal_set_message(t('You have not assigned the "access ckeditor" <a href="@permissions">permissions</a> yet. It is recommended to assign the "access ckeditor" <a href="@permissions">permissions</a> before updating CKEditor profiles.', array('@permissions' => url('admin/user/permissions'))), 'warning');
   }
 
   if (empty($profile->name)) {
@@ -249,6 +249,10 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
       $newname = $profile->name;
       break;
   }
+
+  $global_profile = ckeditor_profile_load("CKEditor Global Profile");
+  $toolbar_wizard = !empty($global_profile->settings['toolbar_wizard']) ? $global_profile->settings['toolbar_wizard'] : 't';
+  drupal_add_js(array('ckeditor_toolbar_wizard' => $toolbar_wizard), 'setting');
 
   $form['basic']['name'] = array(
     '#type' => 'textfield',
@@ -314,9 +318,9 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
     }
     $form['security']['filters'][$id] = array(
       '#type' => 'checkbox',
-      '#title' => $filter->name,
+      '#title' => check_plain($filter->name),
       '#default_value' => !empty($profile->settings['filters'][$id]),
-      '#description' => module_invoke($filter->module, 'filter', 'description', $filter->delta),
+      '#description' => check_plain(module_invoke($filter->module, 'filter', 'description', $filter->delta)),
     );
   }
 
@@ -467,26 +471,29 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
   drupal_set_html_head('<script type="text/javascript" src="'. $editor_path .'/ckeditor.js?I"></script>');
   drupal_add_js($module_drupal_path . '/ckeditor.config.js', 'file');
   drupal_add_js($module_drupal_path . '/includes/ckeditor.admin.js', 'file');
-  if (module_exists('jquery_ui')){
-    if (!module_exists('jquery_update'))
-      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-1.4.4.min.js', 'core');
-      if (jquery_ui_get_version() > 1.6)
-      {
-        jquery_ui_add(array('ui.sortable'));
-      }else {
-        drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-ui.js', 'file');
-        drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.widget.js', 'file');
-        drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.sortable.js', 'file');
-      }
-  }
-  else {
-      if(!module_exists('jquery_update'))
+
+  if ($toolbar_wizard == 't') {
+    if (module_exists('jquery_ui')) {
+      if (!module_exists('jquery_update')  || jquery_update_get_version() <= 1.2 )
         drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-1.4.4.min.js', 'core');
-      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-ui.js', 'file');
-      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.widget.js', 'file');
-      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.sortable.js', 'file');
+        if (jquery_ui_get_version() > 1.6) {
+          jquery_ui_add(array('ui.sortable'));
+        }
+        else {
+          drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-ui.min.js', 'file');
+          drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.widget.min.js', 'file');
+          drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.sortable.min.js', 'file');
+        }
+    }
+    else {
+      if (!module_exists('jquery_update') || jquery_update_get_version() <= 1.2 )
+        drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-1.4.4.min.js', 'core');
+      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery-ui.min.js', 'file');
+      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.widget.min.js', 'file');
+      drupal_add_js($module_drupal_path . '/includes/jqueryUI/jquery.ui.sortable.min.js', 'file');
+    }
+    drupal_add_js($module_drupal_path . '/includes/jqueryUI/sort.js', 'file');
   }
-  drupal_add_js($module_drupal_path . '/includes/jqueryUI/sort.js', 'file');
 
   $form['appearance']['uicolor'] = array(
     '#type' => 'select',
@@ -520,19 +527,21 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
     '#rows' => 15
   );
 
-  $form['appearance']['toolbar_wizzard_used'] = array(
-    '#type' => 'markup',
-    '#value' => '<div>' . t('Used buttons') . '</div><div class="sortableList" id="groupLayout"></div><br/>',
-    '#description' => t('Currently used buttons'),
-  );
+  if ($toolbar_wizard == 't') {
+    $form['appearance']['toolbar_wizzard_used'] = array(
+      '#type' => 'markup',
+      '#value' => '<div>' . t('Used buttons') . '</div><div class="sortableList" id="groupLayout"></div><br/>',
+      '#description' => t('Currently used buttons'),
+    );
 
-  drupal_add_js(array('cke_toolbar_buttons_all' => ckeditor_toolbar_buttons_all()), 'setting');
+    drupal_add_js(array('cke_toolbar_buttons_all' => ckeditor_toolbar_buttons_all()), 'setting');
 
-  $form['appearance']['toolbar_wizzard_all'] = array(
-    '#type' => 'markup',
-    '#value' => '<div>' . t('All buttons') . '</div><div id="allButtons" class="sortableList"></div><br/>',
-    '#description' => t('All available buttons'),
-  );
+    $form['appearance']['toolbar_wizzard_all'] = array(
+      '#type' => 'markup',
+      '#value' => '<div>' . t('All buttons') . '</div><div id="allButtons" class="sortableList"></div><br/>',
+      '#description' => t('All available buttons'),
+    );
+  }
 
   $plugin_list = ckeditor_load_plugins();
   $plugins = array();
@@ -827,8 +836,11 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
     '#description' => t('Select the file browser that you would like to use to upload Flash movies.'),
   );
 
-  $current_user_files_path = empty($profile->settings['UserFilesPath']) ? "" : strtr($profile->settings['UserFilesPath'], array("%f" => file_directory_path(), "%u" => "UID", "%b" => base_path(), "%n" => "UNAME"));
-  $current_user_files_absolute_path = empty($profile->settings['UserFilesAbsolutePath']) ? "" : strtr($profile->settings['UserFilesAbsolutePath'], array("%f" => file_directory_path(), "%u" => "UID", "%b" => base_path(), "%d" => $_SERVER['DOCUMENT_ROOT'], "%n" => "UNAME"));
+  $current_user_files_path = empty($profile->settings['UserFilesPath']) ? "%b%f/" : $profile->settings['UserFilesPath'];
+  $current_user_files_path = strtr($current_user_files_path, array("%f" => file_directory_path(), "%u" => "UID", "%b" => base_path(), "%n" => "UNAME"));
+
+  $current_user_files_absolute_path = empty($profile->settings['UserFilesAbsolutePath']) ? "%d%b%f/" : $profile->settings['UserFilesAbsolutePath'];
+  $current_user_files_absolute_path =  strtr($current_user_files_absolute_path, array("%f" => file_directory_path(), "%u" => "UID", "%b" => base_path(), "%d" => $_SERVER['DOCUMENT_ROOT'], "%n" => "UNAME"));
 
   if (variable_get('file_downloads', '') != FILE_DOWNLOADS_PRIVATE) {
 
@@ -879,7 +891,7 @@ function ckeditor_admin_profile_form($form_state, $profile = NULL) {
 
   if (variable_get('file_downloads', '') == FILE_DOWNLOADS_PRIVATE) {
     $form['ckeditor_upload_settings']['private_path_descrption'] = array(
-      '#value' => '<div>'.t('Setting a relative path to uploaded files was disabled because private downloads are enabled and thus this path is calculated automatically. To change the location of uploaded files in the private file system, edit the <strong><a href="!url">CKEditor Global Profile</a></strong>.', array('!url' => url('admin/settings/ckeditor/editg'))).'</div>',
+      '#value' => '<div>' . t('Setting a relative path to uploaded files was disabled because private downloads are enabled and thus this path is calculated automatically. To change the location of uploaded files in the private file system, edit the <strong><a href="!url">CKEditor Global Profile</a></strong>.', array('!url' => url('admin/settings/ckeditor/editg'))) . '</div>',
     );
   }
 
@@ -1254,6 +1266,27 @@ function ckeditor_admin_global_profile_form($form_state, $mode = 'add') {
     '#description' => t('The path to the local directory (on the server) that points to the path defined above. Enter either an absolute server path or a path relative to the <code>index.php</code> file. If left empty, the CKEditor module will try to find the right path.<br />Current path: <code>!path</code>', array('!path' => ckeditor_plugins_path(TRUE))),
   );
 
+  $form['ckeditor_advanced_settings']['ckfinder_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to CKFinder'),
+    '#default_value' => !empty($profile->settings['ckfinder_path']) ? $profile->settings['ckfinder_path'] : '%m/ckfinder',
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#description' => t('The path to CKFinder (AJAX based file manager downloaded from <a href="!ckfindercom">ckfinder.com</a>) relative to the document root.') .
+      '<br />' .
+      t('Available placeholders:!b &ndash; the base URL path of the Drupal installation (!base).!m &ndash; path where the CKEditor module is stored (<code>!files</code>).!l &ndash; path to the libraries directory (!library)<br />Current path: <code>!path</code>',
+      array(
+        '!b' => '<br /><code>%b</code>',
+        '!m' => '<br /><code>%m</code>',
+        '!l' => '<br /><code>%l</code>',
+        '!path' => ckfinder_path(),
+        '!base' => base_path(),
+        '!files' => base_path() . $module_drupal_path,
+        '!library' => base_path() . 'sites/all/libraries/',
+        '!ckeditorcom' => 'http://ckfinder.com/download'
+      ))
+  );
+
   $form['ckeditor_advanced_settings']['show_fieldnamehint'] = array(
     '#type' => 'radios',
     '#title' => t('Show field name hint below each rich text editor'),
@@ -1271,7 +1304,7 @@ function ckeditor_admin_global_profile_form($form_state, $mode = 'add') {
     '#title' => t('Enable access to files located in the private folder'),
     '#default_value' => !empty($profile->settings['ckeditor_allow_download_private_files']),
     '#return_value' => 't',
-    '#description' =>  t('<strong>Use this option with care.</strong> If checked, CKEditor will allow anyone knowing the URL to view a file, if it located inside of the private path (<code>'.realpath(file_directory_path()).'</code>) and if there is no information about the file in the Drupal database.'),
+    '#description' => t('<strong>Use this option with care.</strong> If checked, CKEditor will allow anyone knowing the URL to view a file located inside of the private path (<code>' . realpath(file_directory_path()) . '</code>), but only if there is no information about the file in the Drupal database. If the path below is specified, anyone will have access only to that location.'),
     '#required' => FALSE
   );
 
@@ -1282,7 +1315,7 @@ function ckeditor_admin_global_profile_form($form_state, $mode = 'add') {
       '#default_value' => !empty($profile->settings['private_dir']) ? $profile->settings['private_dir'] : '',
       '#size' => 40,
       '#maxlength' => 255,
-      '#description' => t('The path relative to the location of the private directory where CKEditor should store uploaded files.') . '<br />' . t('<strong>Warning:</strong> CKEditor does not implement any kind of access protection on files available in this location. All files stored in the directory defined above might be accessible to unauthenticated users if there is no information about the file in the Drupal\'s database.') . '<br />' . t('System path to the private folder is: !system_path.', array('!system_path' => realpath(file_directory_path()) . DIRECTORY_SEPARATOR)) . '<br />' . t('Available wildcard characters:') . '<br/><strong>%u</strong> - ' . t('User ID') . '<br /><strong>%n</strong> - ' . t('Username') . '<br />' . t('Current path: !path', array('!path' => $current_private_dir . ' (' . str_replace('/', DIRECTORY_SEPARATOR, file_create_path(str_replace(array('%u', '%n'), array('UID', 'UNAME'), $current_private_dir))) . ')')),
+     '#description' => t('The path relative to the location of the private directory where CKEditor should store uploaded files.') . '<br />' . t('System path to the private folder is: !system_path.', array('!system_path' => realpath(file_directory_path()) . DIRECTORY_SEPARATOR)) . '<br />' . t('Available wildcard characters:') . '<br/><strong>%u</strong> - ' . t('User ID') . '<br /><strong>%n</strong> - ' . t('Username') . '<br />' . t('Current path: !path', array('!path' => $current_private_dir . ' (' . str_replace('/', DIRECTORY_SEPARATOR, file_create_path(str_replace(array('%u', '%n'), array('UID', 'UNAME'), $current_private_dir))) . ')')),
     );
   }
   if (function_exists('linktocontent_node_menu') && function_exists('pathfilter_filter')) {
@@ -1294,6 +1327,17 @@ function ckeditor_admin_global_profile_form($form_state, $mode = 'add') {
     '#description' => t('With the !plink extension it is possible to use internal: links. By default the !link extension is linking to nodes using paths.', array('!plink' => l(t('Path Filter'), 'http://drupal.org/project/pathfilter'), '!link' => l(t('Link To Content'), 'http://drupal.org/project/linktocontent'))),
     );
   }
+
+  $form['ckeditor_advanced_settings']['toolbar_wizard'] = array(
+    '#type' => 'radios',
+    '#title' => t('Use toolbar Drag&Drop feature'),
+    '#default_value' => !empty($profile->settings['toolbar_wizard']) ? $profile->settings['toolbar_wizard'] : 't',
+    '#options' => array(
+      't' => t('Enabled'),
+      'f' => t('Disabled')
+    ),
+    '#description' => t('When enabled, the toolbar can be built by using the drag-and-drop feature. Otherwise you will need to enter the toolbar configuration manually to the text box.'),
+  );
 
   $form['submit'] = array(
     '#type' => 'submit',
@@ -1371,6 +1415,16 @@ function ckeditor_admin_global_profile_form_submit($form, &$form_state) {
   //no slash at the end
   $edit['ckeditor_plugins_path'] = trim(rtrim($edit['ckeditor_plugins_path'], "/"));
 
+  //strip slash from the end
+  if (empty($edit['ckfinder_path'])) {
+    $edit['ckfinder_path'] = '';
+  }
+  $edit['ckfinder_path'] = trim(rtrim($edit['ckfinder_path'], "/"));
+  if ($edit['ckfinder_path'] && 0 !== strpos($edit['ckfinder_path'], "/") && 0 !== strpos($edit['ckfinder_path'], "%")) {
+    //ensure that slash is at the beginning
+    $edit['ckfinder_path'] = "/" . $edit['ckfinder_path'];
+  }
+
   $settings = ckeditor_admin_values_to_settings($edit);
   db_query("INSERT INTO {ckeditor_settings} (name, settings) VALUES ('%s', '%s')", $edit['name'], $settings);
   ckeditor_rebuild_selectors($edit['name']);
@@ -1417,7 +1471,7 @@ function ckeditor_admin_profile_validate_fieldpaths($fieldname, $paths) {
   }
 
   if (!empty($myerrors)) {
-    form_set_error($fieldname, implode('<br/>', $myerrors));
+    form_set_error($fieldname, check_plain(implode('<br/>', $myerrors)));
   }
 }
 
@@ -1594,7 +1648,6 @@ function ckeditor_profile_delete($name) {
 }
 
 function _ckeditor_load_methods() {
-  module_load_include('module', 'ckeditor');
   $result = array('ckeditor.js' => 'ckeditor.js');
   if (file_exists(ckeditor_path(TRUE) . '/ckeditor_basic.js')) {
     $result['ckeditor_basic.js'] = 'ckeditor_basic.js';
@@ -1608,7 +1661,10 @@ function _ckeditor_load_methods() {
 /*
  * Disable WYSIWYG module
  */
-function ckeditor_disable_wysiwyg() {
+function ckeditor_disable_wysiwyg($token) {
+  if (!drupal_valid_token($token, 'ckeditorDisableWysiwyg')) {
+    exit();
+  }
   module_disable(array('wysiwyg'));
   drupal_set_message(t('The WYSIWYG module is disabled.'));
 
@@ -1686,10 +1742,10 @@ function ckeditor_toolbar_buttons_all() {
     'BGColor' => array('name' => 'BGColor', 'icon' => $path . '/images/buttons/backgroundColor.png', 'title' => 'Background Color', 'row' => 3),
     'Maximize' => array('name' => 'Maximize', 'icon' => $path . '/images/buttons/maximize.png', 'title' => 'Maximize', 'row' => 3),
     'ShowBlocks' => array('name' => 'ShowBlocks', 'icon' => $path . '/images/buttons/showBlocks.png', 'title' => 'Show Blocks', 'row' => 3),
-    'Iframe' => array('name' => 'Iframe', 'icon' => $path . '/images/buttons/iframe.png', 'title' => 'Read more', 'row' => 3),
+    'Iframe' => array('name' => 'Iframe', 'icon' => $path . '/images/buttons/iframe.png', 'title' => 'IFrame', 'row' => 3),
     'About' => array('name' => 'About', 'icon' => $path . '/images/buttons/about.png', 'title' => 'About', 'row' => 3),
-    '__spacer' => array('name' => false, 'icon' => $path . '/images/buttons/spacer.png', 'title' => 'Spacer', 'row' => 4),
-    '__group' => array('name' => false, 'icon' => $path . '/images/buttons/group.png', 'title' => 'Group', 'row' => 4)
+    '__spacer' => array('name' => FALSE, 'icon' => $path . '/images/buttons/spacer.png', 'title' => 'Spacer', 'row' => 4),
+    '__group' => array('name' => FALSE, 'icon' => $path . '/images/buttons/group.png', 'title' => 'Group', 'row' => 4)
   );
 
   $plugins = ckeditor_load_plugins(TRUE);

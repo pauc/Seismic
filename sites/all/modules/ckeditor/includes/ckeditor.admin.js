@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 $(document).ready(function() {
@@ -60,7 +60,7 @@ $(document).ready(function() {
       }
     }
   });
-  
+
   $(".cke_load_toolbar").click(function() {
     var buttons = eval('Drupal.settings.'+$(this).attr("id"));
     var text = "[\n";
@@ -90,7 +90,13 @@ $(document).ready(function() {
     text = text + "]";
     text = text.replace(/\['\/'\]/g,"'/'");
     $("#edit-toolbar").attr('value',text);
-    Drupal.ckeditorToolbarReload();
+    if (Drupal.settings.ckeditor_toolbar_wizard == 't'){
+      Drupal.ckeditorToolbarReload();
+    }
     return false;
   });
+
+  if (Drupal.settings.ckeditor_toolbar_wizard == 'f'){
+    $("form#ckeditor-admin-profile-form textarea#edit-toolbar, form#ckeditor-admin-profile-form #edit-toolbar + .grippie").show();
+  }
 });
