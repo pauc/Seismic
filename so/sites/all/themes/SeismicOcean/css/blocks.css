@@ -82,6 +82,14 @@ div.block {
 }
 
 /*
+ * ESTILS PER AL BLOC DEL MAPA
+ */
+#block-block-2 .content p:last-child {
+  margin-top: -8px;
+  border-top: 1px solid #ccc;
+}
+
+/*
  * ESTILS PERL AL BLOC DELS PROJECTES
  */
 .view-id-projects.view-display-id-block_1 .views-field-title {

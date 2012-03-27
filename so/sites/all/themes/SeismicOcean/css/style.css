@@ -83,16 +83,19 @@ a:hover {
 .view-poseidon .views-field-view-node a
 {
   text-decoration: none;
-  color: #fff;  
+  color: #fff;
 }
-#block-views-poseidon-block_1 .views-field-view-node a:before,
-.view-secondary-projects .views-field-view-node a:before,
-.view-poseidon .views-field-view-node a:before,
-.view-footer a:before, 
-.read_m-border_rd:before
+
+#block-views-poseidon-block_1 .views-field-view-node a,
+.view-secondary-projects .views-field-view-node a,
+.view-poseidon .views-field-view-node a,
+.view-footer a, 
+.read_m-border_rd
 {
-  content: "›";
-  margin-right: 6px;
+  background-image: url(../images/read_more-bg_white.png);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  padding-left: 8px;
 }
 
 .view-footer {
@@ -105,8 +108,9 @@ a.read_m-border_rd {
   right: 10px;
   bottom: 10px;
   background-color: #f35200;
+  background-position: 10px 50%;
   border-radius: 8px;
-  padding: 4px 12px;
+  padding: 4px 12px 4px 18px;
   color: #fff;
   text-decoration: none;
 }
