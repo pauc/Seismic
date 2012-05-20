@@ -11,7 +11,8 @@ UPGRADE.txt
 .project
 .htaccess
 so/sites/default/settings.php
-so/sites/default/files/imagecache/*
+so/sites/default/files/imagecache/
+so/sites/default/files/css/
 geo.sublime-*
 NOP-sites/
 OLD/

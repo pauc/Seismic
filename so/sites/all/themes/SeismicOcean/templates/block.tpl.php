@@ -64,6 +64,9 @@ if ($title == "Projects") {
 if ($title == "Poseidon project") {
    $link_to = "projects/poseidon";
 }
+if ($title == "Understanding Seismic Oceanography") {
+  $link_to = "seismic_oceanography";
+}
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>">
   <?php if ($title): ?>

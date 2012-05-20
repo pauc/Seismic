@@ -234,6 +234,17 @@ div.block {
   width: 70px;
 }
 
+/*
+ * ESTILS PER AL BLOC "UNDERSTANDING SEISMIC OCEANOGRAPHY"
+ */
+#block-block-5 h2 {
+  height: 50px;
+}
+
+#block-block-5 .front-slideshow {
+  height: auto;
+}
+
 .block.first /* The first block in the region */ {
 }
 
