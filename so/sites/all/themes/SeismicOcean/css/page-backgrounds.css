@@ -11,7 +11,15 @@
 
 
 body {
-  background: url('../images/body-bg.jpg') 50% 0;
+  background: #00418a url('../images/fons_prova3_BG_1px.jpg') 50% 1593px repeat-x;
+}
+
+#main_wrapper {
+  background: transparent url('../images/fons_prova3.jpg') 50% 0 repeat-x;
+}
+
+body.front {
+  background: transparent url('../images/fons_prova3.jpg') 50% 0 repeat-x;
 }
 
 #page-wrapper {

@@ -669,7 +669,7 @@ p>.content-image {
 
 #content-area .node-type-project .field-field-project-body-participants div.project_participants_list {
   margin-right: 25px;
-  width: 190px;
+  width: 182px;
   float:left;
 }
 
@@ -682,8 +682,7 @@ p>.content-image {
 }
 
 #content-area .node-type-project .field-field-project-body-participants ul {
-  width: 200px;
-  min-height: 12.5em;
+  min-height: 14.5em;
   margin: 0 0 1em;
   padding: 5px 0;
   list-style-type: none;

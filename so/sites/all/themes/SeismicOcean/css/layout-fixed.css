@@ -22,6 +22,11 @@
 body {
 }
 
+#main_wrapper {
+  float: left;
+  width: 100%;
+}
+
 #page-wrapper,
 .region-page-closure {
   /*
