@@ -22,9 +22,11 @@
 body {
 }
 
-#main_wrapper {
-  float: left;
+#super-wrapper {
   width: 100%;
+  position: relative;
+  float: left;
+  z-index: -2;
 }
 
 #page-wrapper,

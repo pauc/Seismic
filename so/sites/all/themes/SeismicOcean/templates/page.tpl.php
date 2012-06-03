@@ -118,7 +118,7 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>">
-  <div id="main_wrapper">
+  <div id="super-wrapper">
   
     <?php print $top; ?>
   
