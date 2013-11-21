@@ -10,9 +10,10 @@ UPGRADE.txt
 .settings
 .project
 .htaccess
-so/sites/default/settings.php
+so/sites/default/settings.*
 so/sites/default/files/imagecache/
 so/sites/default/files/css/
+so/sites/default/files/js/
 geo.sublime-*
 NOP-sites/
 OLD/
