@@ -825,6 +825,10 @@ p>.content-image {
   margin-top: 10px;
 }
 
+.openlayers-container .gmnoprint img, .gmnoprint div {
+  display: none;
+}
+
 /* SOBREESCRIVINT ESTILS EN LÍNIA D'OPENLAYERS */
 .olControlPanZoomBar {
   width: 54px;
